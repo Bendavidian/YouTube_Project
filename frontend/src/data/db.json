@@ -1,0 +1,395 @@
+[
+  {
+    "id": 1,
+    "title": "Sunset in Thailand",
+    "description": "Experience the breathtaking beauty of a sunset in Thailand.",
+    "author": "Thai tours",
+    "views": "293,343",
+    "time": "03/04/1998",
+    "img": "pic14.jpg",
+    "data": "/videos/video1.mp4",
+    "comments": [
+      {
+        "comment": "WOOWWW!!",
+        "author": "Ben",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "I love Ido",
+        "author": "Sharon",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "babyyyyy",
+        "author": "Shelly",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "Absolutely breathtaking! Thailand is on my bucket list now.",
+        "author": "susan_123",
+        "avatar": "../users/user-4.jpg"
+      }
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "View of Trees: Serenity in Nature",
+    "description": "Experience the tranquility and beauty of nature with this stunning view of trees.",
+    "author": "WildNature",
+    "views": "503,638",
+    "time": "05/06/2023",
+    "img": "pic15.jpg",
+    "data": "/videos/video2.mp4",
+    "comments": [
+      {
+        "comment": "WOOWWW!!",
+        "author": "Ben",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "I love this view!",
+        "author": "Sharon",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "Absolutely beautiful!",
+        "author": "Shelly",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "Absolutely breathtaking! Nature is so calming.",
+        "author": "susan_123",
+        "avatar": "../users/user-4.jpg"
+      }
+    ]
+  },
+
+  {
+    "id": 3,
+    "title": "Crazy basketball moves",
+    "description": "Watch this exciting compilation of jaw-dropping basketball moves! From incredible dunks to mind-blowing crossovers, this video showcases the best of streetball and professional highlights.",
+    "author": "sport.em",
+    "views": "284,379",
+    "time": "01/07/1999",
+    "img": "picsteff11.jpg",
+    "data": "/videos/video5.mp4",
+    "comments": [
+      {
+        "comment": "Incredible game!!",
+        "author": "Ben",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "I love LeBron!",
+        "author": "Sharon",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "What a dunk!",
+        "author": "Shelly",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "Absolutely thrilling! This game is going down in history.",
+        "author": "Gilad",
+        "avatar": "../users/user-4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Mastering Basketball: Tips and Techniques",
+    "description": "Learn the fundamentals and advanced techniques of basketball with this comprehensive guide. Perfect for beginners and seasoned players looking to improve their game.",
+    "author": "Coach Kobe",
+    "views": "100,087",
+    "time": "12/03/1998",
+    "img": "pic16.jpg",
+    "data": "/videos/video6.mp4",
+    "comments": [
+      {
+        "comment": "Incredible game!!",
+        "author": "Ben",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "I love LeBron!",
+        "author": "Sharon",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "What a dunk!",
+        "author": "Shelly",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "Absolutely thrilling! This game is going down in history.",
+        "author": "susan_123",
+        "avatar": "../users/user-4.jpg"
+      },
+      {
+        "comment": "Best game of the season!",
+        "author": "james",
+        "avatar": "../users/user-5.jpg"
+      },
+      {
+        "comment": "The buzzer-beater was epic!",
+        "author": "alex",
+        "avatar": "../users/user-6.jpg"
+      },
+      {
+        "comment": "Defense was on point tonight.",
+        "author": "mike",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "Can't believe that three-pointer!",
+        "author": "katie",
+        "avatar": "../users/user-2.jpg"
+      }
+    ]
+  },
+
+  {
+    "id": 5,
+    "title": "Beach View: A Tranquil Paradise",
+    "description": "Immerse yourself in the serene beauty of this stunning beach view. Crystal-clear waters and pristine sands make this a perfect getaway destination.",
+    "author": "TravelWithEmma",
+    "views": "150,234",
+    "time": "7/9/2014",
+    "img": "pic1.jpg",
+    "data": "/videos/video3.mp4",
+    "comments": [
+      {
+        "comment": "The beach looks absolutely stunning!",
+        "author": "Ben",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "I wish I was there right now.",
+        "author": "Sharon",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "Such a peaceful and beautiful place.",
+        "author": "Shelly",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "This video makes me want to go on vacation.",
+        "author": "susan_123",
+        "avatar": "../users/user-4.jpg"
+      },
+      {
+        "comment": "Amazing footage and editing!",
+        "author": "james",
+        "avatar": "../users/user-5.jpg"
+      },
+      {
+        "comment": "The sunset is breathtaking!",
+        "author": "alex",
+        "avatar": "../users/user-6.jpg"
+      },
+      {
+        "comment": "This beach is on my travel list now.",
+        "author": "mike",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "Great video! Thanks for sharing.",
+        "author": "katie",
+        "avatar": "../users/user-2.jpg"
+      }
+    ]
+  },
+
+  {
+    "id": 6,
+    "title": "Beach Day Fun",
+    "description": "bendbendbdn",
+    "author": "JohnTravels",
+    "views": "85,421",
+    "time": "09/05/2003",
+    "img": "pic17.jpg",
+    "data": "/videos/video4.mp4",
+    "comments": [
+      {
+        "comment": "Looks like a lot of fun!",
+        "author": "anna",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "I love the beach vibes.",
+        "author": "mark",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "The water looks so clear and inviting.",
+        "author": "lucy",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "What a great day at the beach!",
+        "author": "tom",
+        "avatar": "../users/user-4.jpg"
+      },
+      {
+        "comment": "I need a beach day soon.",
+        "author": "sarah",
+        "avatar": "../users/user-5.jpg"
+      }
+    ]
+  },
+
+  {
+    "id": 7,
+    "title": "Israel’s Special Forces: Elite Training",
+    "description": "A captivating look into the rigorous training and exceptional skills of Israel's elite special forces.",
+    "author": "MilitaryInsight",
+    "views": "102,543",
+    "time": "3/2/2019",
+    "img": "soilders.13.jpg",
+    "data": "/videos/video8.mp4",
+    "comments": [
+      {
+        "comment": "Incredible footage! Their training is on another level.",
+        "author": "david",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "Much respect for these brave soldiers.",
+        "author": "emma",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "Amazing to see the dedication and hard work.",
+        "author": "liam",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "This gives a whole new perspective on what they go through.",
+        "author": "olivia",
+        "avatar": "../users/user-4.jpg"
+      },
+      {
+        "comment": "Such a well-produced video. Learned a lot!",
+        "author": "noah",
+        "avatar": "../users/user-5.jpg"
+      }
+    ]
+  },
+
+  {
+    "id": 8,
+    "title": "Friends: The One with All the Laughter",
+    "description": "Join the iconic group of friends—Rachel, Ross, Monica, Chandler, Joey, and Phoebe—in this hilarious and heartwarming episode from the beloved series 'Friends'.",
+    "author": "TVClassics",
+    "views": "1,234,567",
+    "time": "04/06/2005",
+    "img": "friends.14.jpg",
+    "data": "/videos/video9.mp4",
+    "comments": [
+      {
+        "comment": "This episode never gets old. So funny!",
+        "author": "rachel_fan",
+        "avatar": "../users/user-6.jpg"
+      },
+      {
+        "comment": "I love watching Friends! Best show ever!",
+        "author": "joey_lover",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "Monica's jokes are on point in this one.",
+        "author": "monica_fan",
+        "avatar": "../users/user-4.jpg"
+      },
+      {
+        "comment": "Chandler's sarcasm always makes me laugh.",
+        "author": "chandler_rules",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "Phoebe's songs are hilarious!",
+        "author": "phoebe_fan",
+        "avatar": "../users/user-1.jpg"
+      }
+    ]
+  },
+
+  {
+    "id": 9,
+    "title": "Funny Kids Fails Compilation 2019",
+    "description": "A hilarious compilation of the best funny kids fails from 2019. Try not to laugh or grin as you watch these adorable and funny moments.",
+    "author": "FunnyVines",
+    "views": "394,142",
+    "time": "2/4/2011",
+    "img": "pic18.jpg",
+    "data": "/videos/video10.mp4",
+    "comments": [
+      {
+        "comment": "This made my day! So funny!",
+        "author": "laughing_dad",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "I couldn't stop laughing!",
+        "author": "happy_mom",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "Kids are the best! Great compilation.",
+        "author": "smiling_grandma",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "The best 3 minutes of my day!",
+        "author": "funny_bro",
+        "avatar": "../users/user-4.jpg"
+      },
+      {
+        "comment": "Loved every second of it!",
+        "author": "joyful_sis",
+        "avatar": "../users/user-5.jpg"
+      }
+    ]
+  },
+
+  {
+    "id": 10,
+    "title": "Never Back Down",
+    "description": "Watch the intense training and thrilling final fight of Jake in 'Never Back Down'. Witness his journey of perseverance and strength in this action-packed sequence.",
+    "author": "ActionClips",
+    "views": "987,654",
+    "time": "1/7/2016",
+    "img": "pic19.jpg",
+    "data": "/videos/video12.mp4",
+    "comments": [
+      {
+        "comment": "This scene is so inspiring!",
+        "author": "action_fan",
+        "avatar": "../users/user-1.jpg"
+      },
+      {
+        "comment": "Jake's transformation is incredible.",
+        "author": "movie_buff",
+        "avatar": "../users/user-2.jpg"
+      },
+      {
+        "comment": "Best fight scene ever!",
+        "author": "fighter101",
+        "avatar": "../users/user-3.jpg"
+      },
+      {
+        "comment": "The training montage is epic!",
+        "author": "training_fanatic",
+        "avatar": "../users/user-4.jpg"
+      },
+      {
+        "comment": "Never gets old. Classic!",
+        "author": "old_school",
+        "avatar": "../users/user-5.jpg"
+      }
+    ]
+  }
+]

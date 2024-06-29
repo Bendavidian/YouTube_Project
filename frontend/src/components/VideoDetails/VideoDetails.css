@@ -1,0 +1,23 @@
+.video-details-container {
+  margin-top: 20px;
+}
+
+.video-details-container .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #131111;
+}
+
+.video-details-container .card-text {
+  font-size: 16px;
+  color: #606060;
+}
+
+.video-details-container .card-img-top {
+  height: 360px;
+  object-fit: cover;
+}
+
+.video-details-container .form-group {
+  margin-bottom: 1rem;
+}

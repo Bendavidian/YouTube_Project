@@ -1,0 +1,66 @@
+.btn-custom {
+    padding: 0.8rem 3rem;
+    background-color: #fefefe;
+    color: #000;
+    border: 2px solid #fff;
+    border-radius: 1000px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Added background color transition */
+    display: inline-block; /* Ensure the button is inline-block */
+    text-align: center; /* Center align text */
+    cursor: pointer; /* Add cursor pointer */
+    font-size: 1.25rem; /* Adjusted font size */
+    font-weight: bold; /* Ensure text is bold */
+}
+
+.btn-custom::before,
+.btn-custom::after {
+    content: "";
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 102%;
+    transform: skew(30deg) translateY(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.btn-custom::before {
+    top: -103%;
+    left: -70%;
+    --direction: 1;
+}
+
+.btn-custom::after {
+    top: 102%;
+    left: 69%;
+    --direction: -1;
+}
+
+.btn-custom:hover::before,
+.btn-custom:hover::after {
+    transform: skew(30deg) translateY(calc(var(--direction) * 100%));
+}
+
+.text-container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.text {
+    display: block;
+    transition: color 0.3s, transform 0.3s; /* Added color transition */
+    font-size: 2rem; /* Adjust the font size to make it clearer */
+    color: #000; /* Ensure initial color is black */
+    font-weight: bold; /* Ensure text is bold */
+}
+
+.btn-custom:hover .text {
+    color: #00f; /* Change to bright blue on hover */
+}
+
+.modal-content {
+    height: 80vh;
+}

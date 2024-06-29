@@ -1,0 +1,106 @@
+.register-container {
+  border: 1px solid rgb(114, 99, 99);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+input[type="text"] {
+  font-size: 1.25rem; /* Larger font size */
+  color: #d6320e; /* Secondary color */
+  border: 2px solid #6c757d; /* Secondary color border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Extra padding */
+}
+
+.custom-field:focus {
+  border-color: #3673af; /* Darker border color on focus */
+  box-shadow: 0 0 5px rgba(108, 117, 125, 0.5); /* Shadow on focus */
+}
+
+.register-title {
+  font-size: 70px;
+}
+
+.img-logo {
+  width: 140px;
+}
+
+.signup-container {
+  background-color: rgb(
+    255,
+    255,
+    255,
+    0.3
+  ); /* Slight white background with transparency */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px; /* Optional: Add margin to the top */
+}
+
+.label-signup {
+  font-weight: bold;
+}
+
+.btn-custom {
+  padding: 0.8rem 3rem;
+  background-color: #fefefe;
+  color: #000;
+  border: 2px solid #fff;
+  border-radius: 1000px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Added background color transition */
+  display: inline-block; /* Ensure the button is inline-block */
+  text-align: center; /* Center align text */
+  cursor: pointer; /* Add cursor pointer */
+  font-size: 1.25rem; /* Adjusted font size */
+  font-weight: bold; /* Ensure text is bold */
+}
+
+.btn-custom::before,
+.btn-custom::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 100%;
+  height: 102%;
+  transform: skew(30deg) translateY(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.btn-custom::before {
+  top: -103%;
+  left: -70%;
+  --direction: 1;
+}
+
+.btn-custom::after {
+  top: 102%;
+  left: 69%;
+  --direction: -1;
+}
+
+.btn-custom:hover::before,
+.btn-custom:hover::after {
+  transform: skew(30deg) translateY(calc(var(--direction) * 100%));
+}
+
+.text-container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.text {
+  display: block;
+  transition: color 0.3s, transform 0.3s; /* Added color transition */
+  font-size: 2rem; /* Adjust the font size to make it clearer */
+  color: #000; /* Ensure initial color is black */
+  font-weight: bold; /* Ensure text is bold */
+}
+
+.btn-custom:hover .text {
+  color: #00f; /* Change to bright blue on hover */
+}

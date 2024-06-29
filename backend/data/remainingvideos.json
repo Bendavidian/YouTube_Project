@@ -1,0 +1,146 @@
+[
+  {
+    "title": "The Mandalorian - 'Mandalore'",
+    "description": "The reveal of Mandalore.",
+    "url": "https://example.com/videos/mandalorian2.mp4",
+    "duration": 220,
+    "uploadedBy": "user1_id",
+    "author": "user1_id",
+    "views": 3567,
+    "likes": 786,
+    "tags": ["The Mandalorian", "Sci-Fi", "Reveal"],
+    "comments": [
+      {
+        "userId": "user3_id",
+        "comment": "Mandalore looks amazing!",
+        "createdAt": "2024-07-02T14:45:20Z"
+      },
+      {
+        "userId": "user5_id",
+        "comment": "I can't wait to see more of this.",
+        "createdAt": "2024-07-02T16:30:35Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/mandalorian2.jpg"
+  },
+  {
+    "title": "The Crown - 'Princess Diana's Wedding'",
+    "description": "The grand wedding of Princess Diana.",
+    "url": "https://example.com/videos/thecrown2.mp4",
+    "duration": 300,
+    "uploadedBy": "user2_id",
+    "author": "user2_id",
+    "views": 2798,
+    "likes": 543,
+    "tags": ["The Crown", "Historical", "Wedding"],
+    "comments": [
+      {
+        "userId": "user1_id",
+        "comment": "Such a beautiful ceremony.",
+        "createdAt": "2024-07-02T18:10:20Z"
+      },
+      {
+        "userId": "user4_id",
+        "comment": "Princess Diana was stunning.",
+        "createdAt": "2024-07-02T20:05:45Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/thecrown2.jpg"
+  },
+  {
+    "title": "Sherlock - 'A Study in Pink'",
+    "description": "Sherlock solves his first case with John Watson.",
+    "url": "https://example.com/videos/sherlock2.mp4",
+    "duration": 260,
+    "uploadedBy": "user3_id",
+    "author": "user3_id",
+    "views": 3045,
+    "likes": 689,
+    "tags": ["Sherlock", "Drama", "First Case"],
+    "comments": [
+      {
+        "userId": "user2_id",
+        "comment": "The beginning of an amazing partnership.",
+        "createdAt": "2024-07-03T08:25:30Z"
+      },
+      {
+        "userId": "user5_id",
+        "comment": "Benedict and Martin are perfect together.",
+        "createdAt": "2024-07-03T10:10:45Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/sherlock2.jpg"
+  },
+  {
+    "title": "Black Mirror - 'Nosedive'",
+    "description": "The dystopian world where social media dictates life.",
+    "url": "https://example.com/videos/blackmirror2.mp4",
+    "duration": 240,
+    "uploadedBy": "user4_id",
+    "author": "user4_id",
+    "views": 3786,
+    "likes": 854,
+    "tags": ["Black Mirror", "Sci-Fi", "Dystopia"],
+    "comments": [
+      {
+        "userId": "user3_id",
+        "comment": "A chilling look at our future.",
+        "createdAt": "2024-07-03T12:15:20Z"
+      },
+      {
+        "userId": "user1_id",
+        "comment": "This episode really makes you think.",
+        "createdAt": "2024-07-03T14:10:45Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/blackmirror2.jpg"
+  },
+  {
+    "title": "The Witcher - 'Battle of Sodden Hill'",
+    "description": "The epic battle that showcases Geralt's skills.",
+    "url": "https://example.com/videos/witcher2.mp4",
+    "duration": 300,
+    "uploadedBy": "user5_id",
+    "author": "user5_id",
+    "views": 4321,
+    "likes": 963,
+    "tags": ["The Witcher", "Fantasy", "Battle"],
+    "comments": [
+      {
+        "userId": "user2_id",
+        "comment": "Geralt is a true warrior.",
+        "createdAt": "2024-07-04T09:45:30Z"
+      },
+      {
+        "userId": "user4_id",
+        "comment": "This battle scene is incredible.",
+        "createdAt": "2024-07-04T11:30:40Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/witcher2.jpg"
+  },
+  {
+    "title": "Breaking Bad - 'Ozymandias'",
+    "description": "The downfall of Walter White.",
+    "url": "https://example.com/videos/breakingbad3.mp4",
+    "duration": 320,
+    "uploadedBy": "user1_id",
+    "author": "user1_id",
+    "views": 4876,
+    "likes": 1245,
+    "tags": ["Breaking Bad", "Drama", "Downfall"],
+    "comments": [
+      {
+        "userId": "user3_id",
+        "comment": "This episode is a masterpiece.",
+        "createdAt": "2024-07-04T14:45:20Z"
+      },
+      {
+        "userId": "user2_id",
+        "comment": "The intensity is off the charts.",
+        "createdAt": "2024-07-04T16:30:35Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/breakingbad3.jpg"
+  }
+]

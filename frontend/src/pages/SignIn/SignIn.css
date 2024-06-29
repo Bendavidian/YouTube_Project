@@ -1,0 +1,147 @@
+.login-container {
+  border: 1px solid rgb(114, 99, 99);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.signin-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px #cc0505b4;
+}
+
+.signin-card .form-floating {
+  margin-bottom: 1.5rem;
+}
+
+.signin-container button {
+  color: white;
+  background-color: rgb(35, 35, 167);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.logo-left {
+  margin-left: 0;
+}
+
+.signin-container button:hover {
+  background-color: rgb(145, 207, 227);
+}
+
+h1.display-4 {
+  font-size: 7cqmax;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.special-font {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.5rem;
+  color: #2a4a66;
+  border: 2px solid #6c757d;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.btn-custom {
+  padding: 0.8rem 3rem;
+  background-color: #fefefe;
+  color: #1d0707;
+  border: 4px solid #fff;
+  border-radius: 1000px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.btn-custom::before,
+.btn-custom::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  width: 100%;
+  height: 102%;
+  transform: skew(30deg) translateY(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.btn-custom::before {
+  top: -103%;
+  left: -70%;
+  --direction: 1;
+}
+
+.btn-custom::after {
+  top: 102%;
+  left: 69%;
+  --direction: -1;
+}
+
+.btn-custom:hover::before,
+.btn-custom:hover::after {
+  transform: skew(30deg) translateY(calc(var(--direction) * 100%));
+}
+
+.text-container {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.text {
+  display: block;
+  transition: color 0.3s, transform 0.3s; /* Added color transition */
+  font-size: 2rem; /* Adjust the font size to make it clearer */
+  color: #000; /* Ensure initial color is black */
+  font-weight: bold; /* Ensure text is bold */
+}
+
+.btn-custom:hover .text {
+  color: #00f; /* Change to bright blue on hover */
+}
+
+.login-title {
+  font-size: 70px;
+}
+
+.img-logo {
+  width: 140px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.input-container input {
+  width: 100%;
+  padding-right: 40px; /* Add padding to make space for the icon if needed */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.password-icon {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+.hide-password {
+  padding: 10px !important;
+  font-size: 1.25rem !important;
+}
