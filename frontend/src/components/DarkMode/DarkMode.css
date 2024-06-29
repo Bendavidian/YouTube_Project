@@ -1,0 +1,12 @@
+body.dark {
+  background-color: #1e2c38;
+  color: rgba(255, 255, 255, 0.699);
+}
+
+.signin-container button.dark {
+  background-color: #333638;
+}
+
+.signin-container button.dark:hover {
+  background-color: #171c20;
+}

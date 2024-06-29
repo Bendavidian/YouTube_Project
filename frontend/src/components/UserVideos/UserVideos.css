@@ -1,0 +1,28 @@
+.user-videos-container {
+  margin-top: 20px;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  
+}
+
+.card-text {
+  font-size: 14px;
+  color: #606060;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}

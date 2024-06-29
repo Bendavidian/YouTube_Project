@@ -1,0 +1,62 @@
+.user-management {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.user-management h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-details {
+  text-align: center;
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.edit-form .form-group {
+  margin-bottom: 15px;
+}
+
+.edit-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.edit-form button {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #cc181e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-form button[type="button"] {
+  background-color: #777;
+}
+
+.edit-form button:hover {
+  background-color: #bb161a;
+}
+
+.edit-form button[type="button"]:hover {
+  background-color: #555;
+}
