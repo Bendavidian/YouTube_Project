@@ -9,6 +9,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiDislike } from "react-icons/bi";
 import { FaShareAlt } from "react-icons/fa";
 import { MdOutlineSaveAlt } from "react-icons/md";
+import SocialMediaModal from "./SocialMediaModal";
 import SubscriptionButton from "./SubscriptionButton";
 import { CiEdit } from "react-icons/ci";
 import "./video.css";
@@ -30,6 +31,9 @@ const VideoPlayer = () => {
   const [newCommentContent, setNewCommentContent] = useState("");
   const [newTitle, setNewTitle] = useState("");
   const [newDescription, setNewDescription] = useState("");
+
+  // State for modal visibility
+  const [showModal, setShowModal] = useState(false);
 
   const navigate = useNavigate();
 
@@ -120,12 +124,6 @@ const VideoPlayer = () => {
 
     setComments(updatedComments);
 
-    // setVideos((prevVideos) =>
-    //   prevVideos.map((v) =>
-    //     v.id === video.id ? { ...v, comments: updatedComments } : v
-    //   )
-    // );
-
     setEditingCommentId(null);
     setNewCommentContent("");
   };
@@ -135,12 +133,6 @@ const VideoPlayer = () => {
     const updatedComments = comments.filter((_, index) => index !== id);
 
     setComments(updatedComments);
-
-    // setVideos((prevVideos) =>
-    //   prevVideos.map((v) =>
-    //     v.id === video.id ? { ...v, comments: updatedComments } : v
-    //   )
-    // );
   };
 
   const handleLike = () => {
@@ -198,6 +190,9 @@ const VideoPlayer = () => {
     const nextVideo = fetchedVideos[nextIndex];
     navigate(`/video/${nextVideo._id}`);
   };
+
+  const handleShowModal = () => setShowModal(true);
+  const handleCloseModal = () => setShowModal(false);
 
   if (loading) {
     return (
@@ -257,8 +252,8 @@ const VideoPlayer = () => {
                 <>
                   <h3 className="videoTitle">{video.title}</h3>
                   <div style={{ display: "flex", alignItems: "center" }}>
-                  <p style={{ fontSize: '23px' }}>{video.description}</p>
-                  {isAuthor && (
+                    <p style={{ fontSize: "23px" }}>{video.description}</p>
+                    {isAuthor && (
                       <span
                         style={{
                           marginLeft: "35px",
@@ -288,15 +283,15 @@ const VideoPlayer = () => {
                   {video.author.username}
                 </div>
                 <div className="icon-group">
-                  <button className="icon-g" onClick={handleLike}>
-                    <GrLike /> <span>{likes}</span>
+                <button className="icon-g" onClick={handleLike}>
+                    <GrLike /> <span>{likes.toLocaleString()}</span>
                   </button>
                   <button className="icon-g" onClick={handleDislike}>
-                    <BiDislike /> <span>{dislikes}</span>
+                    <BiDislike /> <span>{dislikes.toLocaleString()}</span>
                   </button>
-                  <span className="icon-g">
+                  <button className="icon-g" onClick={handleShowModal}>
                     <FaShareAlt />
-                  </span>
+                  </button>
                   <span className="icon-g">
                     <MdOutlineSaveAlt />
                   </span>
@@ -322,7 +317,10 @@ const VideoPlayer = () => {
               </div>
               <div className="comments">
                 <h2>{user?.username} Add a comment here</h2>
-                <form onSubmit={handleComment}>
+                <form
+                  onSubmit={handleComment}
+                  style={{ display: "flex", alignItems: "center" }}
+                >
                   <input
                     type="text"
                     value={comment}
@@ -442,6 +440,10 @@ const VideoPlayer = () => {
           ))}
         </Col>
       </Row>
+      <SocialMediaModal
+        showModal={showModal}
+        handleCloseModal={handleCloseModal}
+      />
     </Container>
   );
 };

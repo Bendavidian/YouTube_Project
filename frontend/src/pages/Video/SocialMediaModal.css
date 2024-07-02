@@ -1,0 +1,55 @@
+.social-icons ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 23px;
+  gap: 15px;
+}
+
+.social-icons .item {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d44949;
+  border-radius: 14px;
+  box-shadow: 0 0 10px #555;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icons .item .icon {
+  font-size: 22px;
+  color: #000;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons .item:hover {
+  border: 3px solid #fff;
+  border-radius: 12px;
+}
+
+.social-icons .item:hover .icon {
+  transform: scale(1.2);
+  color: #f1f1f1;
+}
+
+.social-icons .item::before {
+  content: "";
+  position: absolute;
+  width: 132%;
+  height: 132%;
+  background: linear-gradient(to bottom right, #f0ce34, #ee2a7b, #8228d7);
+  transform: rotate(45deg);
+  left: -110%;
+  top: 80%;
+  transition: transform 0.7s;
+}
+
+.social-icons .item:hover::before {
+  transform: translateX(110%) translateY(-80%) rotate(45deg);
+}

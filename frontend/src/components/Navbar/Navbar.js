@@ -49,13 +49,25 @@ const Navbar = () => {
         </Link>
         <div className="header-left">
           {user ? (
-            <img className="user-photo" src={user.avatar} alt="user photo" />
+            <Link
+              to={`/videos/${user._id}`}
+              style={{
+                textDecoration: "none",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img className="user-photo" src={user.avatar} alt="user photo" />
+              <span style={{ fontWeight: "bold", marginLeft: "10px" }}>
+                Welcome {user.username}
+              </span>
+            </Link>
           ) : (
-            <FaRegUserCircle size={30} style={{ marginRight: "13px" }} />
+            <>
+              <FaRegUserCircle size={30} style={{ marginRight: "13px" }} />
+              <span style={{ fontWeight: "bold" }}>Welcome guest</span>
+            </>
           )}
-          <span style={{ fontWeight: "bold" }}>
-            Welcome {user ? user?.username : "guest"}
-          </span>
         </div>
       </div>
       <div className="search">
@@ -70,17 +82,22 @@ const Navbar = () => {
       </div>
       <div className="navbar-right">
         <Switch isOn={darkMode} handleToggle={toggleDarkMode} />
-        {user && <UploadModal />}
+        {user && (
+          <div className="AddVideo-btn" data-label="Add Video">
+            <UploadModal />
+          </div>
+        )}
         {user && (
           <Link
             to="/me"
             className="settings-btn"
             style={{ textDecoration: "none" }}
+            data-label="Settings"
           >
             <IoSettingsOutline size={23} />
           </Link>
         )}
-        <button className="bell-btn">
+        <button className="bell-btn" data-label="Notifications">
           <i className="bi bi-bell"></i>
         </button>
         {user ? (
@@ -90,7 +107,6 @@ const Navbar = () => {
         ) : (
           <Link to="/login" className="btn-sign">
             <FaRegCircleUser />
-
             <span>Sign In</span>
           </Link>
         )}

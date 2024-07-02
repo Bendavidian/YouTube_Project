@@ -3,66 +3,102 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+}
 
-  .gap {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
+.gap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
 
-  .logo {
-    height: 40px;
-    width: 150px;
-  }
+.logo {
+  height: 40px;
+  width: 150px;
+}
 
-  .search {
-    width: 800px;
-    position: relative;
+.search {
+  width: 800px;
+  position: relative;
+}
 
-    .search-bar {
-      width: 100%;
-      outline: none;
-      border-radius: 30px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+.search .search-bar {
+  width: 100%;
+  outline: none;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-    .logo {
-      position: absolute;
-      top: 6px;
-      right: -40px;
-      margin: 0;
-      padding: 0;
-    }
-  }
-  .user-photo {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 14px;
-  }
+.search .logo {
+  position: absolute;
+  top: 6px;
+  right: -40px;
+  margin: 0;
+  padding: 0;
+}
 
-  .navbar-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.user-photo {
+  width: 50px !important;
+  height: 50px !important;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 14px;
+}
 
-    button {
-      background-color: transparent;
-      border: none;
-    }
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 
-    .btn-sign {
-      border: 1px solid black;
-      border-radius: 10px;
-      padding: 3px 5px;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-    }
-  }
+.navbar-right button,
+.navbar-right .AddVideo-btn,
+.navbar-right .settings-btn,
+.navbar-right .bell-btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.navbar-right button:hover,
+.navbar-right .settings-btn:hover,
+.navbar-right .bell-btn:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+}
+
+.navbar-right button:hover::after,
+.navbar-right .AddVideo-btn:hover::after,
+.navbar-right .settings-btn:hover::after,
+.navbar-right .bell-btn:hover::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -25px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.navbar-right .bell-btn i {
+  font-size: 1.5rem;
+}
+
+.navbar-right .btn-sign {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 3px 5px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
