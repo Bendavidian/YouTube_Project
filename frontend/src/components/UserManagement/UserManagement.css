@@ -1,0 +1,145 @@
+/* UserManagement.css */
+
+.user-management {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.user-management.dark-mode {
+  background-color: #2c2c2c;
+  color: #f9f9f9;
+}
+
+.user-management h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.user-management.dark-mode h2 {
+  color: #f9f9f9;
+}
+
+.user-details {
+  text-align: center;
+  color: #000;
+}
+
+.user-management.dark-mode .user-details {
+  color: #f9f9f9;
+}
+
+.user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-details .btn, .edit-form .btn, .edit-form .btn-save, .edit-form .btn-cancel {
+  font-size: 1.2rem; /* Increase font size */
+  padding: 10px 25px; /* Add padding */
+  margin: 10px; /* Add margin to separate the buttons */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  display: inline-block; /* Display buttons inline */
+  border: none; /* Remove border */
+}
+
+.user-details .btn-edit, .edit-form .btn-save {
+  background-color: #007bff; /* Edit and Save button color */
+  color: white; /* Text color */
+}
+
+.user-details .btn-delete, .edit-form .btn-cancel {
+  background-color: #dc3545; /* Delete and Cancel button color */
+  color: white; /* Text color */
+}
+
+.user-details .btn-edit:hover, .edit-form .btn-save:hover {
+  background-color: #0056b3; /* Darken the color on hover */
+}
+
+.user-details .btn-delete:hover, .edit-form .btn-cancel:hover {
+  background-color: #c82333; /* Darken the color on hover */
+}
+
+.edit-form {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.user-management.dark-mode .edit-form {
+  background-color: #333;
+  color: #f9f9f9;
+  border: 1px solid #555;
+}
+
+.edit-form .form-group {
+  margin-bottom: 18px;
+}
+
+.edit-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: inherit;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid #ccc;
+}
+
+.edit-form input::placeholder {
+  color: #999;
+}
+
+.user-management.dark-mode .edit-form input::placeholder {
+  color: #ccc;
+}
+
+.edit-form .form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.custom-modal-position .modal-dialog {
+  position: absolute;
+  top: 60%; /* Adjust this value to position the modal lower or higher */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* Adjust the width to make the modal smaller */
+}
+
+.custom-modal-position .modal-content {
+  background-color: #fff;
+  color: #000;
+}
+
+.user-management.dark-mode .custom-modal-position .modal-content {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+.custom-modal-position .modal-title {
+  font-size: 1.5rem; /* Adjust font size as needed */
+  letter-spacing: 0.05em; /* Adjust letter spacing as needed */
+}
+
+.custom-modal-position .modal-body {
+  font-size: 1.2rem; /* Adjust font size as needed */
+  letter-spacing: 0.03em; /* Adjust letter spacing as needed */
+  font-weight: bold; /* Make the text bold */
+}

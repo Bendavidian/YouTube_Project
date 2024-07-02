@@ -1,0 +1,45 @@
+// import VideoItem from "../VideoItem/VideoItem";
+// import "./VideoListResults.css";
+// import { useVideoContext } from "../../../context/VideoContext";
+// import { Card, Col, Container, Row } from "react-bootstrap";
+
+// function VideoListResults() {
+//   const { fetchedVideos } = useVideoContext();
+
+//   if (fetchedVideos.length) {
+//     const videoList = fetchedVideos.map((video, key) => {
+//       return <VideoItem {...video} key={key} />;
+//     });
+
+//     return <div className="row gx-3">{videoList}</div>;
+//   } else {
+//     return <div className="video-list-results">No videos found</div>;
+//   }
+// }
+// export default VideoListResults;
+import VideoItem from "../VideoItem/VideoItem";
+import "./VideoListResults.css";
+import { useVideoContext } from "../../../context/VideoContext";
+import { Card, Col, Container, Row } from "react-bootstrap";
+
+function VideoListResults() {
+  const { fetchedVideos } = useVideoContext();
+
+  if (fetchedVideos.length) {
+    const videoList = fetchedVideos.map((video, key) => (
+      <Col key={key} xs={12} sm={6} md={4} lg={2} xl={2.4} className="mb-4">
+        <VideoItem {...video} />
+      </Col>
+    ));
+
+    return (
+      <Container fluid>
+        <Row>{videoList}</Row>
+      </Container>
+    );
+  } else {
+    return <div className="video-list-results">No videos found</div>;
+  }
+}
+
+export default VideoListResults;

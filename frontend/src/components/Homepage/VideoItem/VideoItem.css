@@ -1,0 +1,54 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+  border-radius: 5%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card a {
+  text-decoration: none !important;
+  color: inherit;
+}
+.card:hover {
+  background-color: hwb(0 93% 6% / 0.959);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card.dark {
+  background-color: #1e2c38;
+  color: rgba(59, 56, 56, 0.699);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover .duration {
+  opacity: 1;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.duration {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: black;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}

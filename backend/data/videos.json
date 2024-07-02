@@ -1,0 +1,410 @@
+[
+  {
+    "title": "The Pursuit of Happyness - Chris is Hired",
+    "description": "Chris Gardner is offered a job at the brokerage firm.",
+    "url": "https://example.com/videos/pursuit1.mp4",
+    "duration": 180,
+    "uploadedBy": "user1_id",
+    "author": "user1_id",
+    "views": 8543,
+    "likes": 1342,
+    "tags": ["Inspiration", "Drama", "Emotional"],
+    "comments": [
+      {
+        "userId": "user2_id",
+        "comment": "Such an uplifting scene!",
+        "createdAt": "2024-06-30T14:20:10Z"
+      },
+      {
+        "userId": "user4_id",
+        "comment": "Will Smith's performance is outstanding.",
+        "createdAt": "2024-06-30T16:45:55Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/pursuit1.jpg"
+  },
+  {
+    "title": "The Godfather - 'I'm Gonna Make Him an Offer He Can't Refuse'",
+    "description": "Vito Corleone assures Johnny Fontane's future.",
+    "url": "https://example.com/videos/godfather1.mp4",
+    "duration": 150,
+    "uploadedBy": "user3_id",
+    "author": "user3_id",
+    "views": 12345,
+    "likes": 2985,
+    "tags": ["Mafia", "Classic", "Drama"],
+    "comments": [
+      {
+        "userId": "user6_id",
+        "comment": "Iconic line!",
+        "createdAt": "2024-06-30T12:30:10Z"
+      },
+      {
+        "userId": "user7_id",
+        "comment": "Brando at his best.",
+        "createdAt": "2024-06-30T13:15:40Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/godfather1.jpg"
+  },
+  {
+    "title": "Titanic - 'I'm the King of the World!'",
+    "description": "Jack and Rose stand at the bow of the Titanic.",
+    "url": "https://example.com/videos/titanic1.mp4",
+    "duration": 210,
+    "uploadedBy": "user8_id",
+    "author": "user8_id",
+    "views": 16789,
+    "likes": 4783,
+    "tags": ["Romance", "Drama", "Epic"],
+    "comments": [
+      {
+        "userId": "user9_id",
+        "comment": "This scene gives me chills every time.",
+        "createdAt": "2024-06-30T11:20:10Z"
+      },
+      {
+        "userId": "user10_id",
+        "comment": "Beautifully shot.",
+        "createdAt": "2024-06-30T13:55:20Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/titanic1.jpg"
+  },
+  {
+    "title": "Star Wars - 'I Am Your Father'",
+    "description": "Darth Vader reveals his true identity to Luke Skywalker.",
+    "url": "https://example.com/videos/starwars1.mp4",
+    "duration": 180,
+    "uploadedBy": "user11_id",
+    "author": "user11_id",
+    "views": 20543,
+    "likes": 5842,
+    "tags": ["Sci-Fi", "Drama", "Iconic"],
+    "comments": [
+      {
+        "userId": "user12_id",
+        "comment": "One of the greatest twists in movie history!",
+        "createdAt": "2024-06-30T15:20:10Z"
+      },
+      {
+        "userId": "user13_id",
+        "comment": "Chills every time.",
+        "createdAt": "2024-06-30T16:50:25Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/starwars1.jpg"
+  },
+  {
+    "title": "Forrest Gump - 'Run, Forrest, Run!'",
+    "description": "Forrest Gump breaks free from his leg braces and runs.",
+    "url": "https://example.com/videos/forrestgump1.mp4",
+    "duration": 120,
+    "uploadedBy": "user14_id",
+    "author": "user14_id",
+    "views": 19345,
+    "likes": 4325,
+    "tags": ["Inspiration", "Drama", "Classic"],
+    "comments": [
+      {
+        "userId": "user15_id",
+        "comment": "Such a powerful moment!",
+        "createdAt": "2024-06-30T10:25:30Z"
+      },
+      {
+        "userId": "user16_id",
+        "comment": "Tom Hanks is incredible in this role.",
+        "createdAt": "2024-06-30T12:35:45Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/forrestgump1.jpg"
+  },
+  {
+    "title": "The Dark Knight - 'Why So Serious?'",
+    "description": "The Joker explains his scars to Gambol.",
+    "url": "https://example.com/videos/darkknight1.mp4",
+    "duration": 180,
+    "uploadedBy": "user17_id",
+    "author": "user17_id",
+    "views": 22345,
+    "likes": 5923,
+    "tags": ["Action", "Drama", "Villain"],
+    "comments": [
+      {
+        "userId": "user18_id",
+        "comment": "Heath Ledger's Joker is terrifying.",
+        "createdAt": "2024-06-30T14:45:30Z"
+      },
+      {
+        "userId": "user19_id",
+        "comment": "Masterful performance!",
+        "createdAt": "2024-06-30T16:50:20Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/darkknight1.jpg"
+  },
+  {
+    "title": "The Matrix - 'There Is No Spoon'",
+    "description": "Neo meets the Oracle and learns the truth about reality.",
+    "url": "https://example.com/videos/matrix1.mp4",
+    "duration": 180,
+    "uploadedBy": "user20_id",
+    "author": "user20_id",
+    "views": 20456,
+    "likes": 5892,
+    "tags": ["Sci-Fi", "Philosophical", "Action"],
+    "comments": [
+      {
+        "userId": "user21_id",
+        "comment": "Mind-bending scene!",
+        "createdAt": "2024-06-30T12:45:50Z"
+      },
+      {
+        "userId": "user22_id",
+        "comment": "The Matrix is a masterpiece.",
+        "createdAt": "2024-06-30T14:50:25Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/matrix1.jpg"
+  },
+  {
+    "title": "Gladiator - 'Are You Not Entertained?'",
+    "description": "Maximus reveals his identity in the arena.",
+    "url": "https://example.com/videos/gladiator1.mp4",
+    "duration": 150,
+    "uploadedBy": "user23_id",
+    "author": "user23_id",
+    "views": 18745,
+    "likes": 4753,
+    "tags": ["Action", "Drama", "Epic"],
+    "comments": [
+      {
+        "userId": "user24_id",
+        "comment": "Russell Crowe is phenomenal in this role.",
+        "createdAt": "2024-06-30T10:20:15Z"
+      },
+      {
+        "userId": "user25_id",
+        "comment": "Chilling scene!",
+        "createdAt": "2024-06-30T11:30:40Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/gladiator1.jpg"
+  },
+  {
+    "title": "Jurassic Park - 'Welcome to Jurassic Park'",
+    "description": "Dr. Grant and the group see dinosaurs for the first time.",
+    "url": "https://example.com/videos/jurassicpark1.mp4",
+    "duration": 180,
+    "uploadedBy": "user26_id",
+    "author": "user26_id",
+    "views": 21345,
+    "likes": 5723,
+    "tags": ["Adventure", "Sci-Fi", "Iconic"],
+    "comments": [
+      {
+        "userId": "user27_id",
+        "comment": "The CGI holds up so well!",
+        "createdAt": "2024-06-30T12:20:30Z"
+      },
+      {
+        "userId": "user28_id",
+        "comment": "Spielberg's magic at its best.",
+        "createdAt": "2024-06-30T14:35:20Z"
+      }
+    ],
+    "thumbnail": "eden"
+  },
+  {
+    "title": "Pulp Fiction - 'Dance Scene'",
+    "description": "Mia Wallace and Vincent Vega dance at Jack Rabbit Slim's.",
+    "url": "https://example.com/videos/pulpfiction1.mp4",
+    "duration": 120,
+    "uploadedBy": "user29_id",
+    "author": "user29_id",
+    "views": 18456,
+    "likes": 4532,
+    "tags": ["Dance", "Drama", "Classic"],
+    "comments": [
+      {
+        "userId": "user30_id",
+        "comment": "Iconic dance scene!",
+        "createdAt": "2024-06-30T13:30:20Z"
+      },
+      {
+        "userId": "user31_id",
+        "comment": "Travolta and Thurman nailed it.",
+        "createdAt": "2024-06-30T15:40:45Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/pulpfiction1.jpg"
+  },
+  {
+    "title": "Inception - 'Dream Within a Dream'",
+    "description": "Cobb explains the concept of shared dreaming.",
+    "url": "https://example.com/videos/inception1.mp4",
+    "duration": 210,
+    "uploadedBy": "user32_id",
+    "author": "user32_id",
+    "views": 22456,
+    "likes": 4923,
+    "tags": ["Sci-Fi", "Thriller", "Mind-Bending"],
+    "comments": [
+      {
+        "userId": "user33_id",
+        "comment": "Nolan's brilliance on display.",
+        "createdAt": "2024-06-30T14:20:30Z"
+      },
+      {
+        "userId": "user34_id",
+        "comment": "Such a complex and engaging scene.",
+        "createdAt": "2024-06-30T16:30:50Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/inception1.jpg"
+  },
+  {
+    "title": "The Lion King - 'Circle of Life'",
+    "description": "The opening scene showing the presentation of Simba.",
+    "url": "https://example.com/videos/lionking1.mp4",
+    "duration": 180,
+    "uploadedBy": "user35_id",
+    "author": "user35_id",
+    "views": 27456,
+    "likes": 5923,
+    "tags": ["Animation", "Family", "Classic"],
+    "comments": [
+      {
+        "userId": "user36_id",
+        "comment": "Beautiful animation and music.",
+        "createdAt": "2024-06-30T12:10:15Z"
+      },
+      {
+        "userId": "user37_id",
+        "comment": "Iconic opening scene.",
+        "createdAt": "2024-06-30T14:25:30Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/lionking1.jpg"
+  },
+  {
+    "title": "Rocky - 'Training Montage'",
+    "description": "Rocky Balboa trains for his big fight.",
+    "url": "https://example.com/videos/rocky1.mp4",
+    "duration": 240,
+    "uploadedBy": "user38_id",
+    "author": "user38_id",
+    "views": 19456,
+    "likes": 4823,
+    "tags": ["Sports", "Inspiration", "Classic"],
+    "comments": [
+      {
+        "userId": "user39_id",
+        "comment": "The best training montage ever!",
+        "createdAt": "2024-06-30T15:30:20Z"
+      },
+      {
+        "userId": "user40_id",
+        "comment": "Gets me pumped every time.",
+        "createdAt": "2024-06-30T17:45:35Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/rocky1.jpg"
+  },
+  {
+    "title": "The Shawshank Redemption - 'Andy Escapes'",
+    "description": "Andy Dufresne's daring escape from Shawshank Prison.",
+    "url": "https://example.com/videos/shawshank1.mp4",
+    "duration": 240,
+    "uploadedBy": "user41_id",
+    "author": "user41_id",
+    "views": 22456,
+    "likes": 5342,
+    "tags": ["Drama", "Escape", "Classic"],
+    "comments": [
+      {
+        "userId": "user42_id",
+        "comment": "One of the most satisfying movie moments ever.",
+        "createdAt": "2024-06-30T12:45:50Z"
+      },
+      {
+        "userId": "user43_id",
+        "comment": "Incredible scene and performance by Tim Robbins.",
+        "createdAt": "2024-06-30T15:30:25Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/shawshank1.jpg"
+  },
+  {
+    "title": "Saving Private Ryan - 'D-Day Landing'",
+    "description": "The harrowing depiction of the Normandy invasion.",
+    "url": "https://example.com/videos/savingprivateryan1.mp4",
+    "duration": 600,
+    "uploadedBy": "user44_id",
+    "author": "user44_id",
+    "views": 32456,
+    "likes": 7342,
+    "tags": ["War", "Drama", "Historical"],
+    "comments": [
+      {
+        "userId": "user45_id",
+        "comment": "One of the most realistic war scenes ever filmed.",
+        "createdAt": "2024-06-30T14:50:30Z"
+      },
+      {
+        "userId": "user46_id",
+        "comment": "Spielberg's direction is phenomenal.",
+        "createdAt": "2024-06-30T17:45:50Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/savingprivateryan1.jpg"
+  },
+  {
+    "title": "The Avengers - 'Assemble'",
+    "description": "The Avengers come together to fight the Chitauri.",
+    "url": "https://example.com/videos/avengers1.mp4",
+    "duration": 300,
+    "uploadedBy": "user47_id",
+    "author": "user47_id",
+    "views": 29456,
+    "likes": 6823,
+    "tags": ["Action", "Superhero", "Epic"],
+    "comments": [
+      {
+        "userId": "user48_id",
+        "comment": "Epic scene with all the heroes together.",
+        "createdAt": "2024-06-30T13:30:30Z"
+      },
+      {
+        "userId": "user49_id",
+        "comment": "Gives me goosebumps every time.",
+        "createdAt": "2024-06-30T15:40:55Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/avengers1.jpg"
+  },
+  {
+    "title": "Back to the Future - 'DeLorean Time Travel'",
+    "description": "Marty McFly travels back in time in the DeLorean.",
+    "url": "https://example.com/videos/backtothefuture1.mp4",
+    "duration": 180,
+    "uploadedBy": "user50_id",
+    "author": "user50_id",
+    "views": 23456,
+    "likes": 5842,
+    "tags": ["Sci-Fi", "Adventure", "Classic"],
+    "comments": [
+      {
+        "userId": "user51_id",
+        "comment": "Great Scott! What an amazing scene.",
+        "createdAt": "2024-06-30T12:50:30Z"
+      },
+      {
+        "userId": "user52_id",
+        "comment": "Timeless classic.",
+        "createdAt": "2024-06-30T14:55:50Z"
+      }
+    ],
+    "thumbnail": "https://example.com/thumbnails/backtothefuture1.jpg"
+  }
+]
