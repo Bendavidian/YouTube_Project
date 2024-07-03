@@ -12,9 +12,11 @@ const {
   me,
   updateMe,
   deleteMe,
+  getAllUsers,
 } = require("../controllers/userController");
 const { upload, updateMeUpload } = require("../services/multerService");
 
+router.get("/users", getAllUsers);
 router.get("/users/me", authenticateJWT, me);
 router.put(
   "/users/me",

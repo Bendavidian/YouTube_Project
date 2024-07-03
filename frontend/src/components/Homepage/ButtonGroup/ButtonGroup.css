@@ -24,3 +24,8 @@
 .dark {
   background-color: #1e2c38 !important;
 }
+
+.active {
+  color: #0a53e7;
+  background: linear-gradient(to right, #da7f84, #bd3232);
+}

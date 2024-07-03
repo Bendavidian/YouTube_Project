@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Signin from "./pages/SignIn/Signin";
 import Register from "./pages/Register/Register";
@@ -13,6 +13,7 @@ import { UserProvider } from "./context/UserContext";
 import UserVideos from "./components/UserVideos/UserVideos";
 import VideoDetails from "./components/VideoDetails/VideoDetails";
 import UserManagement from "./components/UserManagement/UserManagement";
+import { Navbar } from "react-bootstrap";
 
 function App() {
   return (

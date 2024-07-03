@@ -2,6 +2,7 @@ const path = require("path");
 const ffmpeg = require("fluent-ffmpeg");
 const fs = require("fs-extra");
 const Video = require("../models/Video");
+const { getVideoDuration } = require("../utils/getVideoDuration");
 
 const getAllVideos = async (req, res) => {
   console.log("getAllVideos: Start fetching videos"); // Add log before operation
@@ -40,8 +41,23 @@ const get20Videos = async (req, res) => {
       .sort((a, b) => b.views - a.views)
       .slice(0, 10);
 
+    // Create a Set to track unique video IDs
+    const videoIdSet = new Set();
+
+    // Add random videos to the set
+    randomVideos.forEach((video) => videoIdSet.add(video._id.toString()));
+
+    // Filter out duplicates from the most viewed videos
+    const filteredMostViewedVideos = mostViewedVideos.filter((video) => {
+      if (!videoIdSet.has(video._id.toString())) {
+        videoIdSet.add(video._id.toString());
+        return true;
+      }
+      return false;
+    });
+
     // Combine both sets of videos
-    const combinedVideos = [...randomVideos, ...mostViewedVideos];
+    const combinedVideos = [...randomVideos, ...filteredMostViewedVideos];
 
     res.json(combinedVideos);
   } catch (error) {
@@ -168,12 +184,13 @@ const uploadVideo = async (req, res) => {
     const randomLikes = Math.floor(Math.random() * (1000 - 100 + 1)) + 100; // Random likes between 100 and 1000
     const randomViews = Math.floor(Math.random() * (100000 - 1000 + 1)) + 1000; // Random views between 1000 and 10000
 
+    // Create the video document
     const video = new Video({
       title,
       description,
       url: videoFilePath,
       thumbnail: `http://localhost:8080/uploads/thumbnails/${thumbnailFilename}`,
-      duration: 0, // You might need to calculate the duration separately
+      duration: 0,
       uploadedBy: userId,
       author: userId,
       views: randomViews,
@@ -182,8 +199,18 @@ const uploadVideo = async (req, res) => {
       comments: [],
     });
 
+    // Save the video document
     await video.save();
 
+    console.log("Before calculating duration");
+    // Calculate the video duration
+    const duration = await getVideoDuration(req.file.path);
+    video.duration = duration;
+
+    // Save the video document with updated duration
+    await video.save();
+
+    // Populate the video document with author details
     const populatedVideo = await Video.findById(video._id).populate(
       "author",
       "username avatar"

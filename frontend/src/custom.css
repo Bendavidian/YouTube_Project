@@ -11,3 +11,23 @@
 .decoration-none {
   text-decoration: none !important;
 }
+
+.custom-col {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.padding-left {
+  padding-left: 30px;
+}
+
+.padding-right {
+  padding-right: 30px;
+}
+
+@media (max-width: 1200px) {
+  .custom-col {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}

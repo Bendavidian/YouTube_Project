@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../../api/axios";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Col, Container, Row, Spinner, Button, Form } from "react-bootstrap";
 import { useVideoContext } from "../../context/VideoContext";
 import { useUser } from "../../context/UserContext";
@@ -13,6 +13,7 @@ import SocialMediaModal from "./SocialMediaModal";
 import SubscriptionButton from "./SubscriptionButton";
 import { CiEdit } from "react-icons/ci";
 import "./video.css";
+import { timeAgo } from "../../utils/timeUtils";
 
 const VideoPlayer = () => {
   const { id } = useParams();
@@ -268,7 +269,11 @@ const VideoPlayer = () => {
                 </>
               )}
               <div className="actions">
-                <div className="author">
+                <Link
+                  to={`/videos/${video.author._id}`}
+                  style={{ textDecoration: "none", color: "#000" }}
+                  className="author"
+                >
                   <img
                     src={video.author.avatar}
                     alt="author avatar"
@@ -281,9 +286,9 @@ const VideoPlayer = () => {
                     }}
                   />
                   {video.author.username}
-                </div>
+                </Link>
                 <div className="icon-group">
-                <button className="icon-g" onClick={handleLike}>
+                  <button className="icon-g" onClick={handleLike}>
                     <GrLike /> <span>{likes.toLocaleString()}</span>
                   </button>
                   <button className="icon-g" onClick={handleDislike}>
@@ -301,7 +306,7 @@ const VideoPlayer = () => {
               <div className="play-video-info">
                 <p>
                   {video.views.toLocaleString()} Views &bull;{" "}
-                  {new Date(video.createdAt).toLocaleDateString()}
+                  {timeAgo(new Date(video.createdAt))}
                   {isAuthor && (
                     <span
                       style={{
@@ -433,7 +438,7 @@ const VideoPlayer = () => {
                 </div>
                 <div>
                   <span>{video.views.toLocaleString()} views</span> &bull;{" "}
-                  <span>{new Date(video.createdAt).toLocaleDateString()}</span>
+                  <span>{timeAgo(new Date(video.createdAt))}</span>
                 </div>
               </div>
             </div>

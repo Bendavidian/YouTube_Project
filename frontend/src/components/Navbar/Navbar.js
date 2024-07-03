@@ -1,15 +1,13 @@
 import { FaRegCircleUser } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
-import { CiMenuBurger } from "react-icons/ci";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import UploadModal from "../UploadModal/UploadModal";
 import Switch from "../DarkMode/Switch/Switch";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { DarkModeContext } from "../../context/DarkModeContext";
 import { useVideoContext } from "../../context/VideoContext";
-import { OpenSidebarContext } from "../../context/OpenSidebarContext";
 import "./Navbar.css";
 import { useUser } from "../../context/UserContext";
 
@@ -18,7 +16,6 @@ const Navbar = () => {
 
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext); // Dark mode context
   const { filterVideos } = useVideoContext(); // Video context
-  const { setOpen } = useContext(OpenSidebarContext); // Sidebar context
   const { user, logout } = useUser();
 
   // Handle search input change
@@ -35,11 +32,6 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="gap">
-        <CiMenuBurger
-          size={30}
-          onClick={() => setOpen((o) => !o)}
-          style={{ cursor: "pointer" }}
-        />
         <Link to="/">
           <img
             className="logo"

@@ -5,6 +5,7 @@ const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [users, setUsers] = useState([]);
   const [accessToken, setAccessToken] = useState(
     localStorage.getItem("accessToken")
   );
@@ -28,6 +29,15 @@ const UserProvider = ({ children }) => {
       if (error.response.status === 401) {
         refreshAccessToken();
       }
+    }
+  };
+
+  const fetchAllUsers = async () => {
+    try {
+      const response = await axios.get("http://localhost:8080/api/users");
+      setUsers(response.data);
+    } catch (error) {
+      console.error("Error fetching all users", error);
     }
   };
 
@@ -72,7 +82,9 @@ const UserProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ user, login, logout, setUser }}>
+    <UserContext.Provider
+      value={{ user, users, login, logout, setUser, fetchAllUsers }}
+    >
       {children}
     </UserContext.Provider>
   );

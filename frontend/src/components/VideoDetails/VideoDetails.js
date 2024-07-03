@@ -14,6 +14,7 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./VideoDetails.css";
 import { useUser } from "../../context/UserContext";
+import { useVideoContext } from "../../context/VideoContext";
 
 const VideoDetails = () => {
   const { id } = useParams();
@@ -26,6 +27,7 @@ const VideoDetails = () => {
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const { user } = useUser();
+  const { setFetchedVideos } = useVideoContext();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -62,6 +64,14 @@ const VideoDetails = () => {
       description: optimisticDescription,
     }));
 
+    setFetchedVideos((prevVideos) =>
+      prevVideos.map((v) =>
+        v._id === id
+          ? { ...v, title: optimisticTitle, description: optimisticDescription }
+          : v
+      )
+    );
+
     setNewTitle("");
     setNewDescription("");
 
@@ -91,6 +101,7 @@ const VideoDetails = () => {
     try {
       await axios.delete(`/users/${video.uploadedBy}/videos/${id}`);
       setSuccess("Video deleted successfully");
+      setFetchedVideos((prevVideos) => prevVideos.filter((v) => v._id !== id));
       navigate(`/videos/${user?._id}`);
     } catch (error) {
       setError("Error deleting video");

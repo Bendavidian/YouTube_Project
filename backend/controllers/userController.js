@@ -3,7 +3,9 @@ const ffmpeg = require("fluent-ffmpeg");
 const fs = require("fs-extra");
 const Video = require("../models/Video");
 const User = require("../models/User");
+const Comment = require("../models/Comment");
 const cloudinary = require("../scripts/cloudinary");
+const { getVideoDuration } = require("../utils/getVideoDuration");
 
 const getVideoById = async (req, res) => {
   try {
@@ -164,6 +166,13 @@ const uploadVideo = async (req, res) => {
 
     await video.save();
 
+    const duration = await getVideoDuration(req.file.path);
+    video.duration = duration;
+
+    // Save the video document with updated duration
+    await video.save();
+
+    // Populate the video document with author details
     const populatedVideo = await Video.findById(video._id).populate(
       "author",
       "username avatar"
@@ -268,11 +277,39 @@ const deleteMe = async (req, res) => {
     // Delete all videos authored by the user
     const deleteVideos = await Video.deleteMany({ author: req.user.userId });
 
-    res.json({ user, deletedVideos: deleteVideos });
+    // Delete all comments authored by the user
+    const deleteComments = await Promise.all(
+      user.comments.map(async (commentId) => {
+        return await Comment.findByIdAndDelete(commentId);
+      })
+    );
+
+    res.json({
+      message: "User, videos, and comments deleted successfully",
+      user,
+      deletedVideos: deleteVideos,
+      deletedComments: deleteComments.length,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
   }
+};
+
+const getAllUsers = async (req, res) => {
+  console.log("getAllUsers: Start fetching users"); // Add log before operation
+
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (error) {
+    console.error("Error fetching users:", error); // Log the error
+    res
+      .status(500)
+      .json({ message: "Error fetching users", error: error.message });
+  }
+
+  console.log("getAllUsers: End fetching users"); // Add log after operation
 };
 
 module.exports = {
@@ -286,4 +323,5 @@ module.exports = {
   me,
   updateMe,
   deleteMe,
+  getAllUsers,
 };

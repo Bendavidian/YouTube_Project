@@ -10,7 +10,7 @@
 
 .social-icons .item {
   cursor: pointer;
-  width: 100px;
+  width: 200px;
   height: 100px;
   display: flex;
   justify-content: center;
@@ -36,6 +36,11 @@
 .social-icons .item:hover .icon {
   transform: scale(1.2);
   color: #f1f1f1;
+}
+
+.social-icons .item .icon {
+  height: 40px;
+  width: 40px;
 }
 
 .social-icons .item::before {

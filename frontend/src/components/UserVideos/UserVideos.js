@@ -4,10 +4,16 @@ import { Link, useParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./UserVideos.css";
 import api from "../../api/axios";
+import { useUser } from "../../context/UserContext";
 
 const UserVideos = () => {
   const { id } = useParams();
+  const { user, users } = useUser();
   const [videos, setVideos] = useState([]);
+
+  const currentUser = users.find((user) => user?._id === id);
+
+  const isUser = id === user?._id;
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -23,10 +29,12 @@ const UserVideos = () => {
 
   return (
     <Container className="user-videos-container">
-      <h2>Your videos:</h2>
+      <h2>{isUser ? "Your" : currentUser?.username} videos:</h2>
       <Row>
         {videos.map((video) => (
-          <Link to={`/video-details/${video._id}`}>
+          <Link
+            to={isUser ? `/video-details/${video._id}` : `/video/${video._id}`}
+          >
             <Col key={video._id} md={4}>
               <Card className="mb-4">
                 <Card.Img variant="top" src={video.thumbnail} />

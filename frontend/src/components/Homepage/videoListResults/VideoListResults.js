@@ -1,4 +1,3 @@
-
 import VideoItem from "../VideoItem/VideoItem";
 import "./VideoListResults.css";
 import { useVideoContext } from "../../../context/VideoContext";
@@ -9,7 +8,7 @@ function VideoListResults() {
 
   if (fetchedVideos.length) {
     const videoList = fetchedVideos.map((video, key) => (
-      <Col key={key} xs={12} sm={6} md={4} lg={2} xl={2.4} className="mb-4">
+      <Col key={key} xs={12} sm={6} md={4} lg={2} className="mb-4 custom-col">
         <VideoItem {...video} />
       </Col>
     ));
