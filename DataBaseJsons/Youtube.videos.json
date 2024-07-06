@@ -1,0 +1,1536 @@
+[{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ff7d"
+  },
+  "title": "Breaking Bad - 'I am the one who knocks!'",
+  "description": "Walter White asserts his dominance to Skyler.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403757/quujjzoc0s4xmklqezov.mp4",
+  "duration": 79.180045,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "views": 1543,
+  "likes": 234,
+  "tags": [
+    "Breaking Bad",
+    "Drama",
+    "Iconic Scene"
+  ],
+  "comments": [
+    {
+      "$oid": "667da3be2fa15ebf4e317858"
+    },
+    {
+      "$oid": "667c51a49fe34d436f0b7081"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ff80"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ff82"
+    },
+    {
+      "$oid": "667c4db773f4d06becccc884"
+    },
+    {
+      "$oid": "667c4df673f4d06becccc896"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923165/xnbx8mqrfuv9eqn1iwgq.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.163Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:28.738Z"
+  },
+  "__v": 5
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ff85"
+  },
+  "title": "Game of Thrones - 'The Red Wedding'",
+  "description": "The shocking Red Wedding scene.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403775/v6ai35yp78xohwjkbgsh.mp4",
+  "duration": 158.91737,
+  "uploadedBy": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "author": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "views": 2457,
+  "likes": 512,
+  "tags": [
+    "Game of Thrones",
+    "Drama",
+    "Shocking Moment"
+  ],
+  "comments": [
+    {
+      "$oid": "667e9b534d1c41678c091a91"
+    },
+    {
+      "$oid": "667e9b514d1c41678c091a8d"
+    },
+    {
+      "$oid": "667e9b4e4d1c41678c091a89"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ff87"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ff89"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923177/xymhyi2w9opcyslfkq2v.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.229Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:28.913Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ff8c"
+  },
+  "title": "Friends: Seven, Seven, Seven! (Clip) | TBS",
+  "description": "Watch Friends OnDemand and on the TBS app!",
+  "url": " https://res.cloudinary.com/dz01eqj7b/video/upload/v1719583809/y4l40kk6kll3g71fjznw.mp4",
+  "duration": 90,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428b"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428b"
+  },
+  "views": 1987,
+  "likes": 348,
+  "tags": [
+    "Friends",
+    "Comedy",
+    "Funny Scene"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ff8e"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ff90"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923168/j74ggfrtfnsaqnc132uc.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.240Z"
+  },
+  "updatedAt": {
+    "$date": "2024-06-26T12:01:36.247Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ff93"
+  },
+  "title": "Stranger Things - 'The Demogorgon'",
+  "description": "The first encounter with the Demogorgon.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403772/m0eau91s3tudbnhz2v2j.mp4",
+  "duration": 253.422585,
+  "uploadedBy": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "author": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "views": 3078,
+  "likes": 612,
+  "tags": [
+    "Stranger Things",
+    "Sci-Fi",
+    "Thrilling Scene"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ff95"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ff97"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923174/eqi7umbckcvqfizhmwu2.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.251Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:29.158Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ff9a"
+  },
+  "title": "The Office - 'Fire Drill'",
+  "description": "Dwight's fire drill goes horribly wrong.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403760/ctjbgiahjmqmhxwz7m4a.mp4",
+  "duration": 296.7278,
+  "uploadedBy": {
+    "$oid": "667ace63ac730e6030274290"
+  },
+  "author": {
+    "$oid": "667ace63ac730e6030274290"
+  },
+  "views": 2589,
+  "likes": 478,
+  "tags": [
+    "The Office",
+    "Comedy",
+    "Hilarious Scene"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ff9c"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ff9e"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923167/cvey8nikw9mms9ylevli.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.266Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:29.350Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffa1"
+  },
+  "title": "The Mandalorian - 'The Child'",
+  "description": "The Mandalorian discovers The Child.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403756/sja3tdgu2ylu7ue5ine2.mp4",
+  "duration": 112.918639,
+  "uploadedBy": {
+    "$oid": "667ace63ac730e6030274290"
+  },
+  "author": {
+    "$oid": "667ace63ac730e6030274290"
+  },
+  "views": 3320,
+  "likes": 789,
+  "tags": [
+    "The Mandalorian",
+    "Sci-Fi",
+    "Iconic Moment"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ffa3"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffa5"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923164/iverxp62dyep6btkhcfw.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.280Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:29.549Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffa8"
+  },
+  "title": "The Crown - 'Coronation of Queen Elizabeth II'",
+  "description": "The majestic coronation ceremony of Queen Elizabeth II.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403773/rek0byvdhemm6wrqazp8.mp4",
+  "duration": 185.620317,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "views": 1834,
+  "likes": 456,
+  "tags": [
+    "The Crown",
+    "Historical",
+    "Royalty"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ffaa"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffac"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923175/jved2rzavlqwaa0rkamq.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.291Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:29.753Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffaf"
+  },
+  "title": "Sherlock - 'The Reichenbach Fall'",
+  "description": "Sherlock's confrontation with Moriarty.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403764/jpnspywia08rmr8gmj2x.mp4",
+  "duration": 208.491973,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "views": 2765,
+  "likes": 592,
+  "tags": [
+    "Sherlock",
+    "Drama",
+    "Intense Scene"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ffb1"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffb3"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923171/rz2h9bt6hotfbj2pvnd8.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.305Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:29.937Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffb6"
+  },
+  "title": "Black Mirror - 'San Junipero'",
+  "description": "The beautiful love story in a digital afterlife.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403766/ktvkcpxmqm9fl2qfujn6.mp4",
+  "duration": 241.859048,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "views": 3234,
+  "likes": 645,
+  "tags": [
+    "Black Mirror",
+    "Sci-Fi",
+    "Romantic"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ffb8"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffba"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923171/xiynvlmkoytvvutijuf5.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.319Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:30.087Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffbd"
+  },
+  "title": "The Rocky & Creed Saga",
+  "description": "Experience the epic rise of Rocky Balboa and the legacy of Adonis Creed in this thrilling 7-minute recap. Relive the iconic moments, legendary fights, and unforgettable emotions of the Rocky & Creed saga!\n\n",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719591919/f1yfii81s6qnxutvceeu.mp4",
+  "duration": 457.433107,
+  "uploadedBy": {
+    "$oid": "667ace64ac730e6030274291"
+  },
+  "author": {
+    "$oid": "667ace64ac730e6030274291"
+  },
+  "views": 2875,
+  "likes": 532,
+  "tags": [
+    "The Witcher",
+    "Fantasy",
+    "Music"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ffbf"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffc1"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923178/ctesxs8m3efh7ylmmicj.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.327Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:30.283Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffc4"
+  },
+  "title": "Breaking Bad - 'Say My Name'",
+  "description": "Walter White's iconic 'Say my name' moment.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403758/xi6wrwidofilgvvhodnf.mp4",
+  "duration": 191.169887,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "views": 3441,
+  "likes": 789,
+  "tags": [
+    "Breaking Bad",
+    "Drama",
+    "Iconic Scene"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ffc6"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffc8"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923166/szqjb3y035fvi02cdsie.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.338Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:30.470Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffcb"
+  },
+  "title": "Mike Ross Interview with Harvey Specter _ Suits",
+  "description": "The emotional final episode of Friends.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719910257/dd2lmqorjf44vf35dxm7.mp4",
+  "duration": 532.828299,
+  "uploadedBy": {
+    "$oid": "667ace63ac730e6030274290"
+  },
+  "author": {
+    "$oid": "667ace63ac730e6030274290"
+  },
+  "views": 4123,
+  "likes": 963,
+  "tags": [
+    "Friends",
+    "Comedy",
+    "Finale"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ffcd"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffcf"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923170/abnghihsa8fqbzmbb4ek.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.352Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:30.733Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffd2"
+  },
+  "title": "Game of Thrones - 'Battle of the Bastards'",
+  "description": "The epic battle between Jon Snow and Ramsay Bolton.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403762/vlfidyre4187objpnfvo.mp4",
+  "duration": 239.072653,
+  "uploadedBy": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "author": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "views": 5398,
+  "likes": 1254,
+  "tags": [
+    "Game of Thrones",
+    "Drama",
+    "Epic Battle"
+  ],
+  "comments": [
+    {
+      "$oid": "6685371bb4eee1a8e95d27a6"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffd4"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffd6"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923169/arrvn0nroaw7oxk9ouku.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.365Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T11:33:47.022Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffd9"
+  },
+  "title": "Stranger Things - 'The Upside Down'",
+  "description": "The discovery of the Upside Down world.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403769/dbxtqtx1hthbia62jzzh.mp4\n",
+  "duration": 224.327982,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "views": 3876,
+  "likes": 854,
+  "tags": [
+    "Stranger Things",
+    "Sci-Fi",
+    "Mystery"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ffdb"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffdd"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923174/eqi7umbckcvqfizhmwu2.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.373Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:31.109Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667c0320f7bccc1a7de1ffe0"
+  },
+  "title": "The Office - 'Goodbye, Michael'",
+  "description": "Michael Scott's heartfelt farewell.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719403760/ctjbgiahjmqmhxwz7m4a.mp4",
+  "duration": 296.7278,
+  "uploadedBy": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "author": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "views": 4290,
+  "likes": 978,
+  "tags": [
+    "The Office",
+    "Comedy",
+    "Emotional Scene"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ffe2"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ffe4"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923172/uiqaecmv4k2egdr7esyt.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.382Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:31.318Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "667ec5364037791641f84dfb"
+  },
+  "title": "Friends: Seven, Seven, Seven! (Clip) | TBS",
+  "description": "Watch Friends OnDemand and on the TBS app!",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719583809/y4l40kk6kll3g71fjznw.mp4",
+  "duration": 182.648163,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428b"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428b"
+  },
+  "views": 1987,
+  "likes": 348,
+  "tags": [
+    "Friends",
+    "Comedy",
+    "Funny Scene"
+  ],
+  "comments": [
+    {
+      "$oid": "667c0320f7bccc1a7de1ff8e"
+    },
+    {
+      "$oid": "667c0320f7bccc1a7de1ff90"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923168/j74ggfrtfnsaqnc132uc.jpg",
+  "createdAt": {
+    "$date": "2024-06-26T12:01:36.240Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:31.480Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6683ca6a5edb8ba3c6e56459"
+  },
+  "title": "The Pursuit of Happyness - Chris is Hired",
+  "description": "Chris Gardner is offered a job at the brokerage firm.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719913005/neugzhzlw3egesd4xxvo.mp4",
+  "duration": 269.7695,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428b"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428b"
+  },
+  "views": 8543,
+  "likes": 1342,
+  "tags": [
+    "Inspiration",
+    "Drama",
+    "Emotional"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790ca87"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790ca89"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923176/zop0pietnknzbjsinhjr.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T09:37:46.305Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:31.692Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6683ca6a5edb8ba3c6e56461"
+  },
+  "title": "The Godfather - 'I'm Gonna Make Him an Offer He Can't Refuse",
+  "description": "Vito Corleone assures Johnny Fontane's future.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719913002/ur6zkct1esnjkwsoejmm.mp4",
+  "duration": 88.305488,
+  "uploadedBy": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "author": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "views": 12345,
+  "likes": 2985,
+  "tags": [
+    "Mafia",
+    "Classic",
+    "Drama"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790ca8c"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790ca8e"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923176/djdgzzqcokflxglufvgi.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T09:37:46.331Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T18:33:18.374Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6683ca6a5edb8ba3c6e56468"
+  },
+  "title": "Titanic - 'I'm the King of the World!'",
+  "description": "Jack and Rose stand at the bow of the Titanic.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719913007/nnjzc9gacnij0sk00gqf.mp4",
+  "duration": 115.681814,
+  "uploadedBy": {
+    "$oid": "667ace61ac730e603027428d"
+  },
+  "author": {
+    "$oid": "667ace61ac730e603027428d"
+  },
+  "views": 16789,
+  "likes": 4783,
+  "tags": [
+    "Romance",
+    "Drama",
+    "Epic"
+  ],
+  "comments": [
+    {
+      "$oid": "66892cfa1e35b24978f55eea"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790ca91"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790ca93"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923179/io0yosuczbcyt8bqflz1.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T09:37:46.339Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-06T11:39:38.068Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "6683ca6a5edb8ba3c6e5646f"
+  },
+  "title": "Star Wars - 'I Am Your Father'",
+  "description": "Darth Vader reveals his true identity to Luke Skywalker.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719913001/wgaytby5uztemhwvrdro.mp4",
+  "duration": 129.474467,
+  "uploadedBy": {
+    "$oid": "668077912b3013a2c8fc66f8"
+  },
+  "author": {
+    "$oid": "668077912b3013a2c8fc66f8"
+  },
+  "views": 20543,
+  "likes": 5842,
+  "tags": [
+    "Sci-Fi",
+    "Drama",
+    "Iconic"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790ca96"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790ca98"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719923173/dul3qionzzfm8tpsqggx.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T09:37:46.347Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:32.327Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6683ca6a5edb8ba3c6e56476"
+  },
+  "title": "Forrest Gump - 'Run, Forrest, Run!'",
+  "description": "Forrest Gump breaks free from his leg braces and runs.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912977/ytmrahvazjoehsnyy3nb.mp4",
+  "duration": 142.106122,
+  "uploadedBy": {
+    "$oid": "668077942b3013a2c8fc66fe"
+  },
+  "author": {
+    "$oid": "668077942b3013a2c8fc66fe"
+  },
+  "views": 19345,
+  "likes": 4325,
+  "tags": [
+    "Inspiration",
+    "Drama",
+    "Classic"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790ca9b"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790ca9d"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924435/e1eittuq5dhrzab5yucx.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T09:37:46.356Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:32.491Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6683ca6a5edb8ba3c6e5647d"
+  },
+  "title": "The Dark Knight - 'Why So Serious?'",
+  "description": "The Joker explains his scars to Gambol.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719913010/tmxgwscyduox9v8ct5at.mp4",
+  "duration": 233.546304,
+  "uploadedBy": {
+    "$oid": "668077932b3013a2c8fc66fd"
+  },
+  "author": {
+    "$oid": "668077932b3013a2c8fc66fd"
+  },
+  "views": 22345,
+  "likes": 5923,
+  "tags": [
+    "Action",
+    "Drama",
+    "Villain"
+  ],
+  "comments": [
+    {
+      "$oid": "6685b1f42c696f566ee4d64e"
+    },
+    {
+      "$oid": "6685b1952c696f566ee4d630"
+    },
+    {
+      "$oid": "6685b09e6dce73924c3de009"
+    },
+    {
+      "$oid": "6685adf76dce73924c3ddf73"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790caa0"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790caa2"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924441/isddexcwptzc73fbg83q.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T09:37:46.365Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T20:17:56.123Z"
+  },
+  "__v": 7
+},
+{
+  "_id": {
+    "$oid": "6683ca6a5edb8ba3c6e56484"
+  },
+  "title": "The Matrix - 'There Is No Spoon'",
+  "description": "Neo meets the Oracle and learns the truth about reality.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719913003/krdmux7voifa730xqvmf.mp4",
+  "duration": 70.681542,
+  "uploadedBy": {
+    "$oid": "667ace5fac730e603027428a"
+  },
+  "author": {
+    "$oid": "667ace5fac730e603027428a"
+  },
+  "views": 20456,
+  "likes": 5892,
+  "tags": [
+    "Sci-Fi",
+    "Philosophical",
+    "Action"
+  ],
+  "comments": [
+    {
+      "$oid": "6686ea4e765722f3433cd4ef"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790caa5"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790caa7"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924440/q36veimjnnjz38btwnny.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T09:37:46.371Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-04T18:30:38.030Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "6683ca6a5edb8ba3c6e5648b"
+  },
+  "title": "Gladiator - 'Are You Not Entertained?'",
+  "description": "Maximus reveals his identity in the arena.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912969/tpzvobmc1wl6pnkgaers.mp4",
+  "duration": 135.279456,
+  "uploadedBy": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "author": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "views": 18745,
+  "likes": 4753,
+  "tags": [
+    "Action",
+    "Drama",
+    "Epic"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790caaa"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790caac"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924432/vepp89y3bmrhagkx61hl.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T09:37:46.378Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:33.021Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "6683cae739630a2ebe2a24a2"
+  },
+  "title": "Jurassic Park - 'Welcome to Jurassic Park'",
+  "description": "Dr. Grant and the group see dinosaurs for the first time.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912982/sg65qa39vtnqruq3sjlz.mp4",
+  "duration": 188.313832,
+  "uploadedBy": {
+    "$oid": "667ace5eac730e6030274288"
+  },
+  "author": {
+    "$oid": "667ace5eac730e6030274288"
+  },
+  "views": 21345,
+  "likes": 5723,
+  "tags": [
+    "Adventure",
+    "Sci-Fi",
+    "Iconic"
+  ],
+  "comments": [
+    {
+      "$oid": "6685b2bb65580d6d8801efb0"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790caaf"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cab1"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924437/ejrprkz58wo4fj0cf1uv.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T09:39:51.777Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T20:21:15.202Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "6683cf347c7a083d0ca662f0"
+  },
+  "title": "Back to the Future - 'DeLorean Time Travel'",
+  "description": "Marty McFly travels back in time in the DeLorean.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912973/kb77wwbkeg5qrpe6uocn.mp4",
+  "duration": 435.16517,
+  "uploadedBy": {
+    "$oid": "668077922b3013a2c8fc66fb"
+  },
+  "author": {
+    "$oid": "668077922b3013a2c8fc66fb"
+  },
+  "views": 23456,
+  "likes": 5842,
+  "tags": [
+    "Sci-Fi",
+    "Adventure",
+    "Classic"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790cab4"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cab6"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924433/wbqwilmlyr23vzbh6pn1.jpg",
+  "__v": 2,
+  "createdAt": {
+    "$date": "2024-07-02T10:14:00.002Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:34.213Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6683cf587c7a083d0ca662f1"
+  },
+  "title": "The Avengers - 'Assemble'",
+  "description": "The Avengers come together to fight the Chitauri.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912971/shftzpszjcf2hxhq82wm.mp4",
+  "duration": 110.155465,
+  "uploadedBy": {
+    "$oid": "668077952b3013a2c8fc66ff"
+  },
+  "author": {
+    "$oid": "668077952b3013a2c8fc66ff"
+  },
+  "views": 29456,
+  "likes": 6823,
+  "tags": [
+    "Action",
+    "Superhero",
+    "Epic"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790cab9"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cabb"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924432/wwaztf95wd6zyzjgpzgl.jpg",
+  "__v": 2,
+  "createdAt": {
+    "$date": "2024-07-02T10:14:00.002Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:35.253Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6683cf6b7c7a083d0ca662f2"
+  },
+  "title": "Saving Private Ryan - 'D-Day Landing'",
+  "description": "The harrowing depiction of the Normandy invasion.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912995/j4zsv8jearyrps78y8zc.mp4",
+  "duration": 563.45542,
+  "uploadedBy": {
+    "$oid": "667ace5eac730e6030274289"
+  },
+  "author": {
+    "$oid": "667ace5eac730e6030274289"
+  },
+  "views": 32456,
+  "likes": 7342,
+  "tags": [
+    "War",
+    "Drama",
+    "Historical"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790cabe"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cac0"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924439/etnsqcjghxqhzantbxnp.jpg",
+  "__v": 2,
+  "createdAt": {
+    "$date": "2024-07-02T10:14:00.003Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:36.657Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6683cf817c7a083d0ca662f3"
+  },
+  "title": "The Shawshank Redemption - 'Andy Escapes'",
+  "description": "Andy Dufresne's daring escape from Shawshank Prison.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912998/zv4dm1zse9eobz9yylo7.mp4",
+  "duration": 203.894422,
+  "uploadedBy": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "author": {
+    "$oid": "667ace60ac730e603027428c"
+  },
+  "views": 22456,
+  "likes": 5342,
+  "tags": [
+    "Drama",
+    "Escape",
+    "Classic"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790cac3"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cac5"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924440/cepz7btmuzx169bbvibk.jpg",
+  "__v": 2,
+  "createdAt": {
+    "$date": "2024-07-02T10:14:00.004Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:36.882Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6683cf927c7a083d0ca662f4"
+  },
+  "title": "Rocky - 'Training Montage'",
+  "description": "Rocky Balboa trains for his big fight.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912990/pvnky67f1vfnpwychqtg.mp4",
+  "duration": 461.101859,
+  "uploadedBy": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "author": {
+    "$oid": "667ace63ac730e603027428f"
+  },
+  "views": 19456,
+  "likes": 4823,
+  "tags": [
+    "Sports",
+    "Inspiration",
+    "Classic"
+  ],
+  "comments": [
+    {
+      "$oid": "6685c58349be5aebb7fe729f"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cac8"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790caca"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924438/zq4xblykcs0k2kdb0g5p.jpg",
+  "__v": 3,
+  "createdAt": {
+    "$date": "2024-07-02T10:14:00.004Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T21:41:23.057Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6683cfa77c7a083d0ca662f5"
+  },
+  "title": "The Lion King - 'Circle of Life'",
+  "description": "The opening scene showing the presentation of Simba.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912975/tr5fnay9lc2gnpqnghkb.mp4",
+  "duration": 246.642358,
+  "uploadedBy": {
+    "$oid": "668077932b3013a2c8fc66fc"
+  },
+  "author": {
+    "$oid": "668077932b3013a2c8fc66fc"
+  },
+  "views": 27456,
+  "likes": 5923,
+  "tags": [
+    "Animation",
+    "Family",
+    "Classic"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790cacd"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cacf"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924435/wugla5tuodsb86ftnptl.jpg",
+  "__v": 2,
+  "createdAt": {
+    "$date": "2024-07-02T10:14:00.005Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:37.923Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6683cfd17c7a083d0ca662f6"
+  },
+  "title": "Inception - 'Dream Within a Dream'",
+  "description": "Cobb explains the concept of shared dreaming.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912980/efgyfqgsfffidtuvd0iw.mp4",
+  "duration": 234.800181,
+  "uploadedBy": {
+    "$oid": "668077932b3013a2c8fc66fc"
+  },
+  "author": {
+    "$oid": "668077932b3013a2c8fc66fc"
+  },
+  "views": 22456,
+  "likes": 4923,
+  "tags": [
+    "Sci-Fi",
+    "Thriller",
+    "Mind-Bending"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790cad2"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cad4"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924436/hvsga2aifigq0gbxl8ym.jpg",
+  "__v": 2,
+  "createdAt": {
+    "$date": "2024-07-02T10:14:00.005Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:38.841Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6683d0027c7a083d0ca662f7"
+  },
+  "title": "Pulp Fiction - 'Dance Scene'",
+  "description": "Mia Wallace and Vincent Vega dance at Jack Rabbit Slim's.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719912987/z3qwzfttvcbctgq2zitc.mp4",
+  "duration": 197.090975,
+  "uploadedBy": {
+    "$oid": "668077912b3013a2c8fc66f9"
+  },
+  "author": {
+    "$oid": "668077912b3013a2c8fc66f9"
+  },
+  "views": 18456,
+  "likes": 4532,
+  "tags": [
+    "Dance",
+    "Drama",
+    "Classic"
+  ],
+  "comments": [
+    {
+      "$oid": "6683d4e6b4970bf37790cad7"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cad9"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719924438/ztmhc3bbebh6fzj2j3w1.jpg",
+  "__v": 2,
+  "createdAt": {
+    "$date": "2024-07-02T10:14:00.006Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T17:56:39.559Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6683d14d00ccc690e8fe7eca"
+  },
+  "title": "Never Back Down - Someday",
+  "description": "This video is a powerful reminder to never give up, no matter how tough the journey gets. With an epic soundtrack and inspiring visuals, it's designed to motivate you to push through challenges and keep striving towards your goals.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1719925186/g2ery37abdo8qc8kfnnl.mp4",
+  "duration": 255.233741,
+  "uploadedBy": {
+    "$oid": "668077912b3013a2c8fc66f8"
+  },
+  "author": {
+    "$oid": "668077912b3013a2c8fc66f8"
+  },
+  "views": 234560,
+  "likes": 5842,
+  "tags": [
+    "Sci-Fi",
+    "Adventure",
+    "Classic"
+  ],
+  "comments": [
+    {
+      "$oid": "66844d14617b766b159f2209"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cadc"
+    },
+    {
+      "$oid": "6683d4e6b4970bf37790cade"
+    }
+  ],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1719925156/ygxkuir4n8ltefbboasa.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T10:07:09.538Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-02T18:55:16.463Z"
+  },
+  "__v": 4
+},
+{
+  "_id": {
+    "$oid": "668450ae617b766b159f2225"
+  },
+  "title": "The Last Dance | Compilation of the best moments | Michael Jordan",
+  "description": "Best moments featuring Michael Jordan's Chicago Bulls in the documentary The Last Dance.",
+  "url": "https://res.cloudinary.com/dz01eqj7b/video/upload/v1720003241/fmm0dnttayfrusiq8za0.mp4",
+  "duration": 0,
+  "uploadedBy": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "author": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "views": 877008,
+  "likes": 235,
+  "tags": [],
+  "comments": [],
+  "thumbnail": "https://res.cloudinary.com/dz01eqj7b/image/upload/v1720003345/juc5llgw7wm7uez7ji31.jpg",
+  "createdAt": {
+    "$date": "2024-07-02T19:10:38.792Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T21:43:03.459Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66859dfdeb1f087bdfffac5e"
+  },
+  "title": "New Divide-Linkin Park // Never Back Down",
+  "description": "dscsddcdcdc",
+  "url": "http://localhost:8080/uploads/videos/1720032764746.mp4",
+  "duration": 266.33288,
+  "uploadedBy": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "author": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "views": 75959,
+  "likes": 824,
+  "tags": [],
+  "comments": [],
+  "thumbnail": "http://localhost:8080/uploads/thumbnails/1720032765104_thumbnail.jpg",
+  "createdAt": {
+    "$date": "2024-07-03T18:52:45.263Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T22:44:05.513Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6685c44749be5aebb7fe7252"
+  },
+  "title": "wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack",
+  "description": "Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack",
+  "url": "http://localhost:8080/uploads/videos/1720042567370.mp4",
+  "duration": 237.377596,
+  "uploadedBy": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "author": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "views": 43169,
+  "likes": 801,
+  "tags": [],
+  "comments": [
+    {
+      "$oid": "668911d91e35b24978f55e6f"
+    }
+  ],
+  "thumbnail": "http://localhost:8080/uploads/thumbnails/1720042567417_thumbnail.jpg",
+  "createdAt": {
+    "$date": "2024-07-03T21:36:07.781Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-06T09:43:53.850Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6685c56449be5aebb7fe728a"
+  },
+  "title": "BAD BUNNY x JHAY CORTEZ - DÁKITI (Video Oficial)",
+  "description": "DÁKITI",
+  "url": "http://localhost:8080/uploads/videos/1720042852005.mp4",
+  "duration": 213.925442,
+  "uploadedBy": {
+    "$oid": "6685c49d49be5aebb7fe725c"
+  },
+  "author": {
+    "$oid": "6685c49d49be5aebb7fe725c"
+  },
+  "views": 39671,
+  "likes": 691,
+  "tags": [],
+  "comments": [],
+  "thumbnail": "http://localhost:8080/uploads/thumbnails/1720042852085_thumbnail.jpg",
+  "createdAt": {
+    "$date": "2024-07-03T21:40:52.218Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T21:40:52.279Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6685d17749be5aebb7fe72e4"
+  },
+  "title": "Grease - You're The One That I Want",
+  "description": "You're The One That I Want (From “Grease”) by John Travolta & Olivia Newton-John",
+  "url": "http://localhost:8080/uploads/videos/1720045943589.mp4",
+  "duration": 247.338957,
+  "uploadedBy": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "author": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "views": 92502,
+  "likes": 606,
+  "tags": [],
+  "comments": [],
+  "thumbnail": "http://localhost:8080/uploads/thumbnails/1720045943659_thumbnail.jpg",
+  "createdAt": {
+    "$date": "2024-07-03T22:32:23.812Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T22:32:23.901Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6685d1d649be5aebb7fe72eb"
+  },
+  "title": "Ellie Goulding - Love Me Like You Do",
+  "description": "Watch Ellie Goulding perform \"Love Me Like You Do\" at The Victoria's Secret 2015 Fashion Show:    • Ellie Goulding -",
+  "url": "http://localhost:8080/uploads/videos/1720046038345.mp4",
+  "duration": 254.212063,
+  "uploadedBy": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "author": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "views": 85786,
+  "likes": 734,
+  "tags": [],
+  "comments": [],
+  "thumbnail": "http://localhost:8080/uploads/thumbnails/1720046038385_thumbnail.jpg",
+  "createdAt": {
+    "$date": "2024-07-03T22:33:58.490Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T22:33:58.536Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6685d2d849be5aebb7fe7303"
+  },
+  "title": "SEAL Team - Jason - Natural",
+  "description": "TV Show CBS SEAL Team",
+  "url": "http://localhost:8080/uploads/videos/1720046296270.mp4",
+  "duration": 189.66059,
+  "uploadedBy": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "author": {
+    "$oid": "6681ba16752e5418aeed3c41"
+  },
+  "views": 64652,
+  "likes": 609,
+  "tags": [],
+  "comments": [],
+  "thumbnail": "http://localhost:8080/uploads/thumbnails/1720046296332_thumbnail.jpg",
+  "createdAt": {
+    "$date": "2024-07-03T22:38:16.466Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-03T22:38:16.531Z"
+  },
+  "__v": 0
+}]
