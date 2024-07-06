@@ -20,6 +20,9 @@ npm install
 ## Start the Application
 npm start
 
+Open the app in your browser by navigating to 'http://localhost:8080/'.
+
+## Development Process
 
 
 
