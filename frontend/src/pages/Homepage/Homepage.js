@@ -5,11 +5,12 @@ import "../../components/DarkMode/DarkMode.css";
 import ButtonGroup from "../../components/Homepage/ButtonGroup/ButtonGroup";
 import { useUser } from "../../context/UserContext";
 
+// Homepage component
 const App = () => {
-  const { fetchAllUsers } = useUser();
+  const { fetchAllUsers } = useUser(); // Fetch all users from context
 
   useEffect(() => {
-    fetchAllUsers();
+    fetchAllUsers(); // Fetch all users when component mounts
   }, []);
 
   return (
@@ -27,4 +28,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; // Exporting the App component as default

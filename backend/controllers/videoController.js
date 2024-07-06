@@ -34,10 +34,10 @@ const get20Videos = async (req, res) => {
     );
 
     // Get 10 random videos
-    const randomVideos = allVideos.sort(() => 0.5 - Math.random()).slice(0, 10);
+    let randomVideos = allVideos.sort(() => 0.5 - Math.random()).slice(0, 10);
 
     // Get 10 videos with the most views
-    const mostViewedVideos = allVideos
+    let mostViewedVideos = allVideos
       .sort((a, b) => b.views - a.views)
       .slice(0, 10);
 
@@ -48,13 +48,23 @@ const get20Videos = async (req, res) => {
     randomVideos.forEach((video) => videoIdSet.add(video._id.toString()));
 
     // Filter out duplicates from the most viewed videos
-    const filteredMostViewedVideos = mostViewedVideos.filter((video) => {
+    let filteredMostViewedVideos = mostViewedVideos.filter((video) => {
       if (!videoIdSet.has(video._id.toString())) {
         videoIdSet.add(video._id.toString());
         return true;
       }
       return false;
     });
+
+    // Ensure we have 10 unique random videos
+    while (filteredMostViewedVideos.length < 10) {
+      const newRandomVideo =
+        allVideos[Math.floor(Math.random() * allVideos.length)];
+      if (!videoIdSet.has(newRandomVideo._id.toString())) {
+        filteredMostViewedVideos.push(newRandomVideo);
+        videoIdSet.add(newRandomVideo._id.toString());
+      }
+    }
 
     // Combine both sets of videos
     const combinedVideos = [...randomVideos, ...filteredMostViewedVideos];

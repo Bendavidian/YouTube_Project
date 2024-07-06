@@ -3,19 +3,23 @@ import { Modal, Button } from "react-bootstrap";
 import "./SocialMediaModal.css";
 import { FaFacebook, FaInstagram, FaTwitter, FaDiscord } from "react-icons/fa";
 
+// SocialMediaModal component for displaying a modal with social media share options
 const SocialMediaModal = ({ showModal, handleCloseModal }) => {
+  // Styles for centering the title
   const centerTitle = {
     display: "flex",
     justifyContent: "center",
     width: "100%",
   };
 
+  // Styles for centering elements
   const ce = {
     display: "flex",
     justifyContent: "center",
     width: "100%",
   };
 
+  // Styles for the large button
   const largeButtonStyle = {
     padding: "10px 20px",
     fontSize: "1.2rem",
@@ -23,8 +27,8 @@ const SocialMediaModal = ({ showModal, handleCloseModal }) => {
   };
 
   return (
-    <Modal show={showModal} onHide={handleCloseModal}>
-      <Modal.Header closeButton>
+    <Modal show={showModal} onHide={handleCloseModal}> {/* Modal component from react-bootstrap */}
+      <Modal.Header closeButton> {/* Modal header with close button */}
         <Modal.Title
           style={{
             fontSize: "1.9rem",
@@ -46,6 +50,7 @@ const SocialMediaModal = ({ showModal, handleCloseModal }) => {
       >
         <div className="social-icons">
           <ul>
+            {/* List of social media icons with links */}
             <li className="item">
               <a href="https://www.facebook.com">
                 <FaFacebook className="icon" />
@@ -82,4 +87,4 @@ const SocialMediaModal = ({ showModal, handleCloseModal }) => {
   );
 };
 
-export default SocialMediaModal;
+export default SocialMediaModal; // Exporting the component as default

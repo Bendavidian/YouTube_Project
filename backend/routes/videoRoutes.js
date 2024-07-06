@@ -11,16 +11,22 @@ const {
 const { authenticateJWT } = require("../services/jwtService");
 const { upload } = require("../services/multerService");
 
+// Route to get 20 videos
 router.get("/videos", get20Videos);
+
+// Route to get all videos
 router.get("/videos/all", getAllVideos);
+
+// Route to get a video by ID
 router.get("/videos/:id", getVideoById);
 
-// New route for updating a video
+// Route to update a video by ID, requires authentication
 router.put("/videos/:id", authenticateJWT, updateVideoById);
 
-// New route for deleting a video
+// Route to delete a video by ID, requires authentication
 router.delete("/videos/:id", authenticateJWT, deleteVideoById);
 
+// Route to upload a new video with file upload, requires authentication
 router.post(
   "/videos/upload",
   authenticateJWT,
@@ -28,4 +34,4 @@ router.post(
   uploadVideo
 );
 
-module.exports = router;
+module.exports = router; // Export the router

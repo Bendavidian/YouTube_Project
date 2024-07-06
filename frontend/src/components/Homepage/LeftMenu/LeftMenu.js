@@ -6,9 +6,11 @@ import "./LeftMenu.css";
 import { Link } from "react-router-dom";
 import { useUser } from "../../../context/UserContext";
 
+// LeftMenu component to display a list of menu items and user members
 function LeftMenu() {
-  const { darkMode } = useContext(DarkModeContext);
-  const { user, users } = useUser();
+  const { darkMode } = useContext(DarkModeContext); // Get dark mode state from context
+  const { user, users } = useUser(); // Get current user and list of users from context
+
 
   return (
     <div>
@@ -41,4 +43,4 @@ function LeftMenu() {
     </div>
   );
 }
-export default LeftMenu;
+export default LeftMenu; // Exporting the LeftMenu component as default

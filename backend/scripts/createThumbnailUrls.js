@@ -4,31 +4,33 @@ const ffmpeg = require("fluent-ffmpeg");
 const cloudinary = require("./cloudinary");
 
 // Paths
-const videosPath = path.join(__dirname, "../uploads/videos");
-const imagesPath = path.join(__dirname, "images");
-const outputPath = path.join(__dirname, "images.json");
+const videosPath = path.join(__dirname, "../uploads/videos"); // Path to the videos folder
+const imagesPath = path.join(__dirname, "images"); // Path to the images folder
+const outputPath = path.join(__dirname, "images.json"); // Path to the output JSON file
 
 // Ensure the images folder exists
 fs.ensureDirSync(imagesPath);
 
 // Function to capture screenshots from videos
 async function captureScreenshots() {
+  // Read video files from the directory and filter valid video formats
   const videoFiles = fs
     .readdirSync(videosPath)
     .filter((file) => /\.(mp4|mov|wmv|avi|flv|mkv)$/.test(file));
 
   for (const file of videoFiles) {
-    const filePath = path.join(videosPath, file);
-    const outputImageName = `${path.basename(file, path.extname(file))}.jpg`;
-    const outputImagePath = path.join(imagesPath, outputImageName);
+    const filePath = path.join(videosPath, file); // Full path to the video file
+    const outputImageName = `${path.basename(file, path.extname(file))}.jpg`; // Output image name
+    const outputImagePath = path.join(imagesPath, outputImageName); // Full path to the output image
 
     try {
+      // Capture screenshot from video
       await new Promise((resolve, reject) => {
         ffmpeg(filePath)
           .outputOptions("-analyzeduration", "100M")
           .outputOptions("-probesize", "50M")
           .screenshots({
-            timestamps: [7],
+            timestamps: [7], // Capture screenshot at 7 seconds
             filename: outputImageName,
             folder: imagesPath,
             size: "640x480",
@@ -38,11 +40,11 @@ async function captureScreenshots() {
       });
 
       console.log(`Screenshot saved for ${file} at ${outputImagePath}`);
-      await uploadImageToCloudinary(outputImagePath, outputImageName);
-      fs.removeSync(outputImagePath);
+      await uploadImageToCloudinary(outputImagePath, outputImageName); // Upload the screenshot to Cloudinary
+      fs.removeSync(outputImagePath); // Delete the local screenshot
       console.log(`Deleted temporary image ${outputImagePath}`);
     } catch (err) {
-      console.error(`Error processing ${file}:`, err.message);
+      console.error(`Error processing ${file}:`, err.message); // Log any errors
     }
   }
 }
@@ -50,10 +52,10 @@ async function captureScreenshots() {
 // Function to upload an image to Cloudinary and save the URL
 async function uploadImageToCloudinary(filePath, fileName) {
   try {
-    const result = await cloudinary.uploader.upload(filePath);
+    const result = await cloudinary.uploader.upload(filePath); // Upload image to Cloudinary
     const imageData = {
-      title: path.basename(fileName, path.extname(fileName)),
-      url: result.secure_url,
+      title: path.basename(fileName, path.extname(fileName)), // Extract title from filename
+      url: result.secure_url, // Get secure URL from Cloudinary
     };
 
     // Read existing data from images.json
@@ -75,7 +77,7 @@ async function uploadImageToCloudinary(filePath, fileName) {
 
 // Main function to execute the script
 async function main() {
-  await captureScreenshots();
+  await captureScreenshots(); // Capture screenshots from videos and upload to Cloudinary
 }
 
-main().catch(console.error);
+main().catch(console.error); // Execute the main function and catch any errors

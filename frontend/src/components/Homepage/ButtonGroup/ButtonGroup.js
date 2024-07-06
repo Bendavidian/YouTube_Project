@@ -3,9 +3,10 @@ import "./ButtonGroup.css";
 import { DarkModeContext } from "../../../context/DarkModeContext";
 import { useLocation } from "react-router-dom";
 
+// ButtonGroup component for displaying a group of category buttons
 const ButtonGroup = () => {
-  const { darkMode } = useContext(DarkModeContext);
-  const location = useLocation();
+  const { darkMode } = useContext(DarkModeContext); // Get dark mode state from context
+  const location = useLocation(); // Get current location from router
 
   return (
     <div className={`row bg-white ${darkMode && "dark"}`}>
@@ -45,4 +46,4 @@ const ButtonGroup = () => {
   );
 };
 
-export default ButtonGroup;
+export default ButtonGroup; // Exporting the ButtonGroup component as default

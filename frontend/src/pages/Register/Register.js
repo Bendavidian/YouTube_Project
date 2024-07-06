@@ -7,6 +7,7 @@ import "../../components/DarkMode/DarkMode.css";
 import "./Register.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// Register component for user registration
 function Register() {
   const [fullName, setFullName] = useState(""); // State for full name input
   const [email, setEmail] = useState(""); // State for email input
@@ -224,4 +225,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Register; // Exporting the Register component as default

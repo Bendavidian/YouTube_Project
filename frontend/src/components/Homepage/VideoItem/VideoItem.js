@@ -5,6 +5,7 @@ import { DarkModeContext } from "../../../context/DarkModeContext";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { timeAgo } from "../../../utils/timeUtils";
 
+// Function to format video duration from seconds to MM:SS format
 function formatDuration(seconds) {
   const totalMinutes = Math.round(seconds / 60);
   const minutes = Math.floor(totalMinutes);
@@ -12,6 +13,7 @@ function formatDuration(seconds) {
   return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
 }
 
+// VideoItem component to display individual video details
 function VideoItem({
   title,
   author,
@@ -21,7 +23,7 @@ function VideoItem({
   _id: id,
   duration,
 }) {
-  const { darkMode } = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeContext); // Get dark mode state from context
 
   return (
     <div className="">
@@ -74,4 +76,4 @@ function VideoItem({
   );
 }
 
-export default VideoItem;
+export default VideoItem; // Exporting the VideoItem component as default

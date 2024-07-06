@@ -5,6 +5,7 @@ const User = require("../models/User");
 const Video = require("../models/Video");
 const Comment = require("../models/Comment");
 
+// Connect to MongoDB
 mongoose.connect("mongodb://localhost:27017/Youtube", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -12,7 +13,7 @@ mongoose.connect("mongodb://localhost:27017/Youtube", {
 
 const db = mongoose.connection;
 
-db.on("error", console.error.bind(console, "connection error:"));
+db.on("error", console.error.bind(console, "connection error:")); // Handle connection errors
 db.once("open", async () => {
   console.log("Connected to the database.");
 

@@ -7,6 +7,7 @@ const Comment = require("../models/Comment");
 const cloudinary = require("../scripts/cloudinary");
 const { getVideoDuration } = require("../utils/getVideoDuration");
 
+// Get videos by user ID
 const getVideoById = async (req, res) => {
   try {
     const videos = await Video.find({ uploadedBy: req.params.id }).populate(
@@ -22,6 +23,7 @@ const getVideoById = async (req, res) => {
   }
 };
 
+// Get a specific video by user ID and video ID
 const getVideoByUserIdAndPid = async (req, res) => {
   console.log(
     "getVideoByUserIdAndPid: Start fetching video by user ID and video ID"
@@ -58,6 +60,7 @@ const getVideoByUserIdAndPid = async (req, res) => {
   );
 };
 
+// Update a video by ID
 const updateVideoById = async (req, res) => {
   console.log("updateVideoById: Start updating video by ID");
   const { id, pid } = req.params;
@@ -89,6 +92,7 @@ const updateVideoById = async (req, res) => {
   console.log("updateVideoById: End updating video by ID");
 };
 
+// Delete a video by ID
 const deleteVideoById = async (req, res) => {
   console.log("deleteVideoById: Start deleting video by ID");
   const { id, pid } = req.params;
@@ -135,6 +139,7 @@ const captureScreenshot = (videoFilePath, outputImagePath) => {
   });
 };
 
+// Upload a new video
 const uploadVideo = async (req, res) => {
   const { title, description } = req.body;
   const { id: userId } = req.params;
@@ -155,15 +160,16 @@ const uploadVideo = async (req, res) => {
       description,
       url: videoFilePath,
       thumbnail: `http://localhost:8080/uploads/thumbnails/${thumbnailFilename}`,
-      duration: 0, // You might need to calculate the duration separately
+      duration: 0,
       uploadedBy: userId,
       author: userId,
       views: randomViews,
       likes: randomLikes,
-      tags: [], // You can adjust this as needed
+      tags: [], 
       comments: [],
     });
 
+    
     await video.save();
 
     const duration = await getVideoDuration(req.file.path);
@@ -188,6 +194,7 @@ const uploadVideo = async (req, res) => {
   }
 };
 
+// Get user by ID
 const getUserById = async (req, res) => {
   const userId = req.params.id;
 
@@ -202,6 +209,7 @@ const getUserById = async (req, res) => {
   }
 };
 
+// Delete user by ID
 const deleteUserById = async (req, res) => {
   const userId = req.params.id;
 
@@ -216,6 +224,7 @@ const deleteUserById = async (req, res) => {
   }
 };
 
+// Get the current authenticated user
 const me = async (req, res) => {
   try {
     const user = await User.findById(req.user.userId).select("-password");
@@ -226,6 +235,7 @@ const me = async (req, res) => {
   }
 };
 
+// Update the current authenticated user
 const updateMe = async (req, res) => {
   const userId = req.user.userId;
 
@@ -265,6 +275,7 @@ const updateMe = async (req, res) => {
   }
 };
 
+// Delete the current authenticated user
 const deleteMe = async (req, res) => {
   try {
     // Delete the user
@@ -296,9 +307,8 @@ const deleteMe = async (req, res) => {
   }
 };
 
+// Get all users
 const getAllUsers = async (req, res) => {
-  console.log("getAllUsers: Start fetching users"); // Add log before operation
-
   try {
     const users = await User.find();
     res.json(users);
@@ -308,8 +318,6 @@ const getAllUsers = async (req, res) => {
       .status(500)
       .json({ message: "Error fetching users", error: error.message });
   }
-
-  console.log("getAllUsers: End fetching users"); // Add log after operation
 };
 
 module.exports = {

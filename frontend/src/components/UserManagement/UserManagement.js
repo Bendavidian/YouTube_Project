@@ -6,20 +6,22 @@ import { useUser } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import { useVideoContext } from "../../context/VideoContext";
 
+// UserManagement component for managing user details
 const UserManagement = () => {
-  const { user, setUser } = useUser();
-  const { setFetchedVideos } = useVideoContext();
-  const navigate = useNavigate();
+  const { user, setUser } = useUser(); // Get current user and setUser function from context
+  const { setFetchedVideos } = useVideoContext(); // Get setFetchedVideos function from video context
+  const navigate = useNavigate(); // Hook to navigate between routes
 
-  const [editing, setEditing] = useState(false);
+  const [editing, setEditing] = useState(false); // State to manage edit mode
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     avatar: null,
-  });
-  const [showModal, setShowModal] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  }); // State for form data
+  const [showModal, setShowModal] = useState(false); // State to manage modal visibility
+  const [darkMode, setDarkMode] = useState(false); // State to manage dark mode
 
+  // Set initial form data from user details
   useEffect(() => {
     if (user) {
       setFormData({
@@ -30,6 +32,7 @@ const UserManagement = () => {
     }
   }, [user]);
 
+  // Handle changes in form fields
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === "avatar") {
@@ -45,6 +48,7 @@ const UserManagement = () => {
     }
   };
 
+  // Handle form submission to update user details
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -64,12 +68,13 @@ const UserManagement = () => {
         },
       })
       .then((response) => {
-        setUser(response.data);
-        setEditing(false);
+        setUser(response.data); // Update user context with new details
+        setEditing(false); // Exit edit mode
       })
       .catch((error) => console.error("Error updating user data:", error));
   };
 
+  // Handle user account deletion
   const handleDelete = () => {
     axios
       .delete("/users/me")
@@ -77,12 +82,13 @@ const UserManagement = () => {
         setFetchedVideos((prevVideos) =>
           prevVideos.filter((video) => video.uploadedBy !== user._id)
         );
-        setUser(null);
-        navigate("/");
+        setUser(null); // Clear user context
+        navigate("/"); // Navigate to homepage
       })
       .catch((error) => console.error("Error deleting user:", error));
   };
 
+  // Toggle dark mode
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     if (darkMode) {
@@ -192,4 +198,4 @@ const UserManagement = () => {
   );
 };
 
-export default UserManagement;
+export default UserManagement; // Exporting the UserManagement component as default

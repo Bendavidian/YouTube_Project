@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${darkMode && "dark"}`}>
       <div className="gap">
         <Link to="/">
           <img

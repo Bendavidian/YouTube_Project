@@ -5,8 +5,9 @@ import Navbar from "../Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 import "./AppLayout.css";
 
+// AppLayout component for the main layout of the application
 const AppLayout = () => {
-  const { darkMode } = useContext(DarkModeContext); // Dark mode context
+  const { darkMode } = useContext(DarkModeContext); // Get dark mode state from context
 
   return (
     <main className={darkMode && "dark"}>
@@ -21,4 +22,4 @@ const AppLayout = () => {
   );
 };
 
-export default AppLayout;
+export default AppLayout; // Exporting the AppLayout component as default

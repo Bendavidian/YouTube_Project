@@ -7,20 +7,21 @@ import { useUser } from "../../context/UserContext";
 import "./Upload.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// Upload component for uploading videos
 const Upload = ({ onHide }) => {
-  const { fetchedVideos, setFetchedVideos } = useVideoContext();
-  const { user } = useUser();
-  const [videoFile, setVideoFile] = useState(null);
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const { fetchedVideos, setFetchedVideos } = useVideoContext(); // Get and set fetched videos from context
+  const { user } = useUser(); // Get the current user from context
+  const [videoFile, setVideoFile] = useState(null); // State for the video file
+  const [title, setTitle] = useState(""); // State for the video title
+  const [description, setDescription] = useState(""); // State for the video description
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Navigation hook
 
   // Handle video file change
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      setVideoFile(file);
+      setVideoFile(file); // Set the video file state
     }
   };
 
@@ -30,9 +31,9 @@ const Upload = ({ onHide }) => {
 
     if (videoFile && title && description) {
       const formData = new FormData();
-      formData.append("title", title);
-      formData.append("description", description);
-      formData.append("videoFile", videoFile);
+      formData.append("title", title); // Append title to form data
+      formData.append("description", description); // Append description to form data
+      formData.append("videoFile", videoFile); // Append video file to form data
 
       try {
         const response = await api.post(`/users/${user._id}/videos`, formData, {
@@ -42,20 +43,21 @@ const Upload = ({ onHide }) => {
         });
 
         const newVideo = response.data.video;
-        setFetchedVideos([...fetchedVideos, newVideo]);
-
+        setFetchedVideos([...fetchedVideos, newVideo]); // Update fetched videos
+        
+        // Reset form fields
         setVideoFile(null);
         setTitle("");
         setDescription("");
         alert("Video uploaded successfully!");
-        navigate("/");
+        navigate("/"); // Navigate to the homepage
         onHide(); // Hide the upload form
       } catch (error) {
         console.error("Error uploading video:", error.response.data.message);
-        alert("Upload failed: " + error.response.data.message);
+        alert("Upload failed: " + error.response.data.message); // Show error message
       }
     } else {
-      alert("Please fill all fields");
+      alert("Please fill all fields"); // Alert if fields are empty
     }
   };
 
@@ -73,7 +75,7 @@ const Upload = ({ onHide }) => {
             type="text"
             placeholder="Enter title"
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)} // Set title state on change
           />
         </Form.Group>
         <Form.Group>
@@ -85,7 +87,7 @@ const Upload = ({ onHide }) => {
             rows={3}
             placeholder="Enter description"
             value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)} // Set description state on change
           />
         </Form.Group>
         <Form.Group>
@@ -95,7 +97,7 @@ const Upload = ({ onHide }) => {
           <Form.Control
             type="file"
             accept="video/*"
-            onChange={handleFileChange}
+            onChange={handleFileChange} // Handle file change
           />
         </Form.Group>
         <Button
@@ -111,4 +113,4 @@ const Upload = ({ onHide }) => {
   );
 };
 
-export default Upload;
+export default Upload; // Exporting the Upload component as default

@@ -16,20 +16,22 @@ import "./VideoDetails.css";
 import { useUser } from "../../context/UserContext";
 import { useVideoContext } from "../../context/VideoContext";
 
+// VideoDetails component for viewing and editing video details
 const VideoDetails = () => {
-  const { id } = useParams();
-  const [video, setVideo] = useState(null);
-  const [newTitle, setNewTitle] = useState("");
-  const [newDescription, setNewDescription] = useState("");
-  const [loading, setLoading] = useState(true);
-  const [updateLoading, setUpdateLoading] = useState(false);
-  const [deleteLoading, setDeleteLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
-  const { user } = useUser();
-  const { setFetchedVideos } = useVideoContext();
-  const navigate = useNavigate();
+  const { id } = useParams(); // Get video ID from URL params
+  const [video, setVideo] = useState(null); // State for video details
+  const [newTitle, setNewTitle] = useState(""); // State for new title input
+  const [newDescription, setNewDescription] = useState(""); // State for new description input
+  const [loading, setLoading] = useState(true); // State for loading indicator
+  const [updateLoading, setUpdateLoading] = useState(false); // State for update button loading indicator
+  const [deleteLoading, setDeleteLoading] = useState(false); // State for delete button loading indicator
+  const [error, setError] = useState(null); // State for error message
+  const [success, setSuccess] = useState(null); // State for success message
+  const { user } = useUser(); // Get user from context
+  const { setFetchedVideos } = useVideoContext(); // Get and set fetched videos from context
+  const navigate = useNavigate(); // Hook to navigate between routes
 
+  // Fetch video details when component mounts or user changes
   useEffect(() => {
     if (!user) return;
 
@@ -37,18 +39,19 @@ const VideoDetails = () => {
       setLoading(true);
       try {
         const response = await axios.get(`/users/${user?._id}/videos/${id}`);
-        setVideo(response.data);
-        setNewTitle(response.data.title);
-        setNewDescription(response.data.description);
+        setVideo(response.data); // Set video details state
+        setNewTitle(response.data.title); // Set new title state
+        setNewDescription(response.data.description); // Set new description state
       } catch (error) {
-        setError("Error fetching video details");
+        setError("Error fetching video details"); // Set error message
       } finally {
-        setLoading(false);
+        setLoading(false); // Set loading to false
       }
     };
     fetchVideo();
   }, [id, user]);
 
+  // Handle update of video details
   const handleUpdate = async (e) => {
     e.preventDefault();
     setError(null);
@@ -58,6 +61,7 @@ const VideoDetails = () => {
     const optimisticTitle = newTitle;
     const optimisticDescription = newDescription;
 
+    // Optimistically update UI before making API call
     setVideo((prevVideo) => ({
       ...prevVideo,
       title: optimisticTitle,
@@ -80,9 +84,9 @@ const VideoDetails = () => {
         title: optimisticTitle,
         description: optimisticDescription,
       });
-      setSuccess("Video updated successfully");
+      setSuccess("Video updated successfully"); // Set success message
     } catch (error) {
-      setError("Error updating video");
+      setError("Error updating video"); // Set error message
       // Revert to original state if the update fails
       setVideo((prevVideo) => ({
         ...prevVideo,
@@ -90,27 +94,28 @@ const VideoDetails = () => {
         description: video.description,
       }));
     } finally {
-      setUpdateLoading(false);
+      setUpdateLoading(false); // Set update loading to false
     }
   };
 
+  // Handle deletion of video
   const handleDelete = async () => {
     setDeleteLoading(true);
     setError(null);
     setSuccess(null);
     try {
       await axios.delete(`/users/${video.uploadedBy}/videos/${id}`);
-      setSuccess("Video deleted successfully");
-      setFetchedVideos((prevVideos) => prevVideos.filter((v) => v._id !== id));
-      navigate(`/videos/${user?._id}`);
+      setSuccess("Video deleted successfully"); // Set success message
+      setFetchedVideos((prevVideos) => prevVideos.filter((v) => v._id !== id)); // Remove video from state
+      navigate(`/videos/${user?._id}`); // Navigate to user's video list
     } catch (error) {
-      setError("Error deleting video");
+      setError("Error deleting video"); // Set error message
     } finally {
-      setDeleteLoading(false);
+      setDeleteLoading(false); // Set delete loading to false
     }
   };
 
-  if (loading) return <Spinner animation="border" />;
+  if (loading) return <Spinner animation="border" />; // Show loading spinner
 
   return (
     <Container className="video-details-container">
@@ -187,4 +192,4 @@ const VideoDetails = () => {
   );
 };
 
-export default VideoDetails;
+export default VideoDetails; // Exporting the VideoDetails component as default

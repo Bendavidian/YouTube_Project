@@ -11,6 +11,7 @@ import { eyeOff } from "react-icons-kit/feather/eyeOff";
 import { eye } from "react-icons-kit/feather/eye";
 import { useUser } from "../../context/UserContext";
 
+// Signin component for user login
 function Signin() {
   const [email, setEmail] = useState(""); // State for email input
   const [suggestions, setSuggestions] = useState([]); // State for email suggestions
@@ -21,7 +22,7 @@ function Signin() {
   const [hidePassword, setHidePassword] = useState(false); // State for hiding password
 
   const navigate = useNavigate(); // Hook to navigate between routes
-  const { login } = useUser();
+  const { login } = useUser(); // Get login function from user context
 
   // Function to toggle password visibility
   const handleToggle = () => {
@@ -61,23 +62,25 @@ function Signin() {
     setEmail(suggestion);
     setSuggestions([]);
   };
+
   // Function to clear all input fields
   const clearFields = () => {
     setEmail("");
     setPassword("");
   };
 
+  // Function to handle user login
   const userLogin = async (e) => {
     e.preventDefault();
     console.log("Attempting login with email:", email);
 
     try {
-      await login(email, password);
-      navigate("/");
+      await login(email, password); // Attempt login with provided email and password
+      navigate("/"); // Navigate to the homepage on successful login
     } catch (error) {
       console.error("Error during login:", error);
-      alert(error.response.data.message);
-      clearFields();
+      alert(error.response.data.message); // Display error message
+      clearFields(); // Clear input fields
     }
   };
 
@@ -111,7 +114,7 @@ function Signin() {
             name="Email:"
             placeholder="Email"
             value={email}
-            onChange={handleFieldChange}
+            onChange={handleFieldChange} // Handle email field change
             className="form-control form-control-lg special-font"
           />
           {suggestions.length > 0 && (
@@ -119,7 +122,7 @@ function Signin() {
               {suggestions.map((suggestion, index) => (
                 <li
                   key={index}
-                  onClick={() => handleSuggestionClick(suggestion)}
+                  onClick={() => handleSuggestionClick(suggestion)} // Handle suggestion click
                 >
                   {suggestion}
                 </li>
@@ -132,14 +135,14 @@ function Signin() {
               name="Password:"
               placeholder="Password"
               value={password}
-              onChange={handleFieldChange}
+              onChange={handleFieldChange} // Handle password field change
               autoComplete="current-password"
               className={`form-control form-control-lg special-font ${
                 hidePassword && "hide-password"
               }`}
             />
             <span className="password-icon" onClick={handleToggle}>
-              <Icon icon={icon} size={25} />
+              <Icon icon={icon} size={25} /> {/* Password visibility toggle icon */}
             </span>
           </div>
           <button type="submit" className="btn btn-custom mt-3 mb-3">
@@ -159,4 +162,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default Signin; // Exporting the Signin component as default

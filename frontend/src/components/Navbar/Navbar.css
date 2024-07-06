@@ -9,6 +9,11 @@
   background-color: #fff; /* Ensure the background color is set */
 }
 
+.dark {
+  background-color: #1e2c38;
+  color: rgba(255, 255, 255, 0.699);
+}
+
 .gap {
   display: flex;
   align-items: center;

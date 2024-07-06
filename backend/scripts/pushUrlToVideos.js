@@ -13,27 +13,32 @@ mongoose.connect("mongodb://localhost:27017/Youtube", {
 const videosJsonPath = path.join(__dirname, "../data/videos.json");
 const videosJson = fs.readJsonSync(videosJsonPath);
 
+// Function to update video URLs in the database
 async function updateVideoUrls() {
   try {
-    const videos = await Video.find();
+    const videos = await Video.find(); // Fetch all videos from the database
     console.log(videos);
 
+    // Loop through each video in videos.json
     for (const jsonVideo of videosJson) {
       const jsonTitleWords = jsonVideo.file
         .split(" ")
-        .filter((word) => word.length > 0);
+        .filter((word) => word.length > 0); // Split and filter words in JSON video title
 
+      // Loop through each video in the database
       for (const dbVideo of videos) {
         const dbTitleWords = dbVideo.title
           .split(" ")
-          .filter((word) => word.length > 0);
+          .filter((word) => word.length > 0); // Split and filter words in DB video title
 
+        // Find common words between JSON video title and DB video title
         const commonWords = jsonTitleWords.filter((word) =>
           dbTitleWords.includes(word)
         );
+        // Update the URL if there are 3 or more common words
         if (commonWords.length >= 3) {
           dbVideo.url = jsonVideo.url;
-          await dbVideo.save();
+          await dbVideo.save(); // Save the updated video to the database
           console.log(`Updated URL for video: ${dbVideo.title}`);
         }
       }
@@ -41,10 +46,11 @@ async function updateVideoUrls() {
 
     console.log("URL update process completed.");
   } catch (error) {
-    console.error("Error updating video URLs:", error);
+    console.error("Error updating video URLs:", error); // Log any errors
   } finally {
-    mongoose.connection.close();
+    mongoose.connection.close(); // Close the database connection
   }
 }
 
+// Execute the function to update video URLs
 updateVideoUrls();

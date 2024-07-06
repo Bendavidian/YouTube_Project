@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import api from "../../api/axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Col, Container, Row, Spinner, Button, Form } from "react-bootstrap";
-import { useVideoContext } from "../../context/VideoContext";
+import { useVideoContext } from "../../context/VideoContext";   
 import { useUser } from "../../context/UserContext";
 import { GrLike } from "react-icons/gr";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -16,11 +16,11 @@ import "./video.css";
 import { timeAgo } from "../../utils/timeUtils";
 
 const VideoPlayer = () => {
-  const { id } = useParams();
-  const { fetchedVideos, setFetchedVideos } = useVideoContext();
-  const { user } = useUser();
-  const [video, setVideo] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const { id } = useParams(); // Get the video ID from the URL
+  const { fetchedVideos, setFetchedVideos } = useVideoContext(); // Get and set fetched videos from context
+  const { user } = useUser(); // Get the current user from context
+  const [video, setVideo] = useState(null); // State for the current video
+  const [loading, setLoading] = useState(true); // State for loading status
 
   // States for comments, likes, dislikes, and editing
   const [comment, setComment] = useState("");
@@ -36,30 +36,29 @@ const VideoPlayer = () => {
   // State for modal visibility
   const [showModal, setShowModal] = useState(false);
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Navigation hook
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // Scroll to the top of the page when the video ID changes
   }, [id]);
 
   useEffect(() => {
     const fetchVideoById = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/videos/${id}`);
+        const response = await fetch(`http://localhost:8080/api/videos/${id}`); // Fetch the video by ID
         if (!response.ok) {
           throw new Error(
             `Network response was not ok: ${response.statusText}`
           );
         }
         const fetchedVideo = await response.json();
-        setVideo(fetchedVideo);
-        console.log(fetchedVideo);
-        setLoading(false);
-        setComments(fetchedVideo?.comments);
-        setLikes(fetchedVideo?.likes);
-        setDislikes(Math.floor(Math.random() * 50) + 1);
-        setNewTitle(fetchedVideo?.title);
-        setNewDescription(fetchedVideo?.description);
+        setVideo(fetchedVideo); // Set the fetched video
+        setLoading(false); // Set loading to false
+        setComments(fetchedVideo?.comments); // Set comments
+        setLikes(fetchedVideo?.likes); // Set likes
+        setDislikes(Math.floor(Math.random() * 50) + 1); // Random dislikes for demo
+        setNewTitle(fetchedVideo?.title); // Set the title
+        setNewDescription(fetchedVideo?.description); // Set the description
       } catch (error) {
         console.error(
           "There has been a problem with your fetch operation:",
@@ -68,10 +67,10 @@ const VideoPlayer = () => {
       }
     };
 
-    fetchVideoById();
+    fetchVideoById(); // Fetch the video data
   }, [id]);
 
-  const isAuthor = user?._id === video?.author._id;
+  const isAuthor = user?._id === video?.author._id; // Check if the current user is the author
 
   const handleComment = async (e) => {
     e.preventDefault();
@@ -109,12 +108,12 @@ const VideoPlayer = () => {
   };
 
   const handleEdit = () => {
-    setIsEditing(true);
+    setIsEditing(true); // Enable editing mode
   };
 
   const handleEditComment = (id, content) => {
-    setEditingCommentId(id);
-    setNewCommentContent(content);
+    setEditingCommentId(id); // Set the comment ID being edited
+    setNewCommentContent(content); // Set the new comment content
   };
 
   const handleSaveComment = (id) => {
@@ -125,8 +124,8 @@ const VideoPlayer = () => {
 
     setComments(updatedComments);
 
-    setEditingCommentId(null);
-    setNewCommentContent("");
+    setEditingCommentId(null); // Reset editing state
+    setNewCommentContent(""); // Clear new comment content
   };
 
   const handleDeleteComment = (id) => {
@@ -137,22 +136,22 @@ const VideoPlayer = () => {
   };
 
   const handleLike = () => {
-    setLikes((prevLikes) => prevLikes + 1);
+    setLikes((prevLikes) => prevLikes + 1); // Increment likes
   };
 
   const handleDislike = () => {
-    setDislikes((prevDislikes) => prevDislikes + 1);
+    setDislikes((prevDislikes) => prevDislikes + 1); // Increment dislikes
   };
 
   const handleUpdateVideo = async () => {
     const updateData = {};
 
     if (newTitle) {
-      updateData.title = newTitle;
+      updateData.title = newTitle; // Update title if changed
     }
 
     if (newDescription) {
-      updateData.description = newDescription;
+      updateData.description = newDescription; // Update description if changed
     }
 
     setVideo((video) => ({
@@ -161,10 +160,10 @@ const VideoPlayer = () => {
       description: newDescription ? newDescription : video.description,
     }));
 
-    setIsEditing(false);
+    setIsEditing(false); // Disable editing mode
 
     try {
-      await api.put(`/videos/${id}`, updateData);
+      await api.put(`/videos/${id}`, updateData); // Update video data
       console.log("Video updated successfully");
     } catch (error) {
       console.log("There was an error updating the video:", error);
@@ -172,30 +171,32 @@ const VideoPlayer = () => {
   };
 
   const handleDelete = async () => {
-    setFetchedVideos((videos) => videos.filter((video) => video._id !== id));
+    setFetchedVideos((videos) => videos.filter((video) => video._id !== id)); // Remove the video from the fetched list
 
     try {
-      await api.delete(`/videos/${id}`);
+      await api.delete(`/videos/${id}`); // Delete the video
       console.log("Video deleted successfully");
-      navigate("/");
+      navigate("/"); // Navigate to the homepage
     } catch (error) {
       console.log("There was an error deleting the video:", error);
       const oldVideos = fetchedVideos.push(video);
-      setFetchedVideos(oldVideos);
+      setFetchedVideos(oldVideos); // Restore the video list in case of error
     }
   };
 
   const handleVideoEnd = () => {
+    // Handle video end event
     const currentIndex = fetchedVideos.findIndex((v) => v._id === id);
     const nextIndex = (currentIndex + 1) % fetchedVideos.length;
     const nextVideo = fetchedVideos[nextIndex];
-    navigate(`/video/${nextVideo._id}`);
+    navigate(`/video/${nextVideo._id}`); // Navigate to the next video
   };
 
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
+  const handleShowModal = () => setShowModal(true); // Show the social media modal
+  const handleCloseModal = () => setShowModal(false); // Close the social media modal
 
   if (loading) {
+    // Render a loading spinner while fetching data
     return (
       <Container
         className="d-flex justify-content-center align-items-center"
@@ -209,6 +210,7 @@ const VideoPlayer = () => {
   }
 
   if (!video) {
+     // Render a message if the video is not found
     return <div className="not-found-message">Video not found!</div>;
   }
 
