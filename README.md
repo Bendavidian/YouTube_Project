@@ -49,11 +49,12 @@ Open the app in your browser by navigating to 'http://localhost:8080/'.
   * Email: bend@gmail.com
   * Password: ben12345
 * As a registered user, and only when connected, you will see two additional buttons at the top of the screen: one for uploading a new video and the other for settings where you can edit your user data. Additionally, you can click on your picture to see all the videos you have uploaded. Alternatively, you can click on the left menu and then on "Your videos" to display all your uploaded videos.
-  
+
 #### Sign-In Page
 * Click on the "Sign In" button to navigate to the sign-in page. Here, you can enter your existing account details or navigate to the registration page if you are not registered yet.
 * If you change your mind and want to return to the home page as a guest, click on the "YouTube" icon in the upper-left part of the registration screen or log in to the application.
 * If you are already registered and want to log in, start typing your email to see suggestions. You can also view the password you type.
+
 
 #### Sign-Up Page
 * To create a new user in our YouTube app, fill in all required fields. The email must follow the pattern name@example.com. The password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji. Confirm your password, choose your display name, and upload a profile photo. Upon successful submission, you will be redirected to the sign-in page.
@@ -90,6 +91,12 @@ Open the app in your browser by navigating to 'http://localhost:8080/'.
 
 
 
+![HOMEPAGE](https://github.com/Bendavidian/YouTube_Project/assets/122617665/85796115-e3c8-4f4b-a61e-e4521d9cf287)
+![SIGN-IN](https://github.com/Bendavidian/YouTube_Project/assets/122617665/f5752a8d-82df-4194-ad60-a86b360b8aff)
+![REGISTER](https://github.com/Bendavidian/YouTube_Project/assets/122617665/98ebe137-c0cd-4786-97af-c49de4e587fc)
+![UPLOAD](https://github.com/Bendavidian/YouTube_Project/assets/122617665/82528b40-8be0-40f0-a662-d6127d9023b0)
+![WATCHING_VIDEO](https://github.com/Bendavidian/YouTube_Project/assets/122617665/dfd9cdd5-b07f-4e41-a8a9-b8e288f52247)
+![DARK-MODE](https://github.com/Bendavidian/YouTube_Project/assets/122617665/65b3f182-3eb0-4d98-85ea-b6a6cf29a29b)
 
 
 
