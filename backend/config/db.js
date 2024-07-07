@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const connectDB = async () => {
   try {
     // Attempt to connect to the MongoDB database
-    await mongoose.connect("mongodb://localhost:27017/Youtube", {
+    await mongoose.connect("mongodb://127.0.0.1:27017/Youtube", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
