@@ -1,8 +1,8 @@
 # Welcome to Our YouTube Server Platform for Web!
 #### how to run the server?
 
-# Downloading and Installing FFmpeg
-# Download FFmpeg:
+## Downloading and Installing FFmpeg
+#### Download FFmpeg:
 
 1. Visit the FFmpeg official download page. [FFMPEG](https://www.ffmpeg.org/download.html)
 2. Choose the appropriate version for your operating system (Windows, macOS, or Linux).
