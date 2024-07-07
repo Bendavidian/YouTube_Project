@@ -12,15 +12,15 @@
 
 1. Go to the FFmpeg download page for Windows [FFMPEG For Windows](https://www.gyan.dev/ffmpeg/builds/).
 2. Download the latest "release" build.
-4. Look for a file named similar to ffmpeg-release-full.7z or ffmpeg-n4.4.1-win64-static.zip.
-5. Extract the downloaded zip file to a directory in your C drive folder (e.g., C:\ffmpeg).
-6. Add FFmpeg to your system PATH:
-7. Open the Start menu, search for "Environment Variables", and select "Edit the system environment variables".
-8. Click on the "Environment Variables" button.
-9. Under "System variables", find and select the "Path" variable, then click "Edit".
-10. Click "New" and add the path to the FFmpeg bin folder (e.g., C:\ffmpeg\bin).
-11. Click "OK" to close all windows.
-12. Verify the installation by opening a Command Prompt and running ffmpeg -version.
+ (Look for a file named similar to ffmpeg-release-full.7z or ffmpeg-n4.4.1-win64-static.zip.)
+3. Extract the downloaded zip file to a directory in your C drive folder (e.g., C:\ffmpeg).
+4. Add FFmpeg to your system PATH:
+5. Open the Start menu, search for "Environment Variables", and select "Edit the system environment variables".
+6. Click on the "Environment Variables" button.
+7. Under "System variables", find and select the "Path" variable, then click "Edit".
+8. Click "New" and add the path to the FFmpeg bin folder (e.g., C:\ffmpeg\bin).
+9. Click "OK" to close all windows.
+10. Verify the installation by opening a Command Prompt and running ffmpeg -version.
 
 * macOS:
 
