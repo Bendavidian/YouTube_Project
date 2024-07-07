@@ -28,11 +28,11 @@
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-Use Homebrew to install FFmpeg:
+2. Use Homebrew to install FFmpeg:
 ```
 brew install ffmpeg
 ```
-Verify the installation by opening Terminal and running 
+3. Verify the installation by opening Terminal and running 
 ```
 ffmpeg -version.
 ```
