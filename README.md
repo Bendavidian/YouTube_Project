@@ -20,7 +20,7 @@
 7. Under "System variables", find and select the "Path" variable, then click "Edit".
 8. Click "New" and add the path to the FFmpeg bin folder (e.g., C:\ffmpeg\bin).
 9. Click "OK" to close all windows.
-10. Verify the installation by opening a Command Prompt and running ffmpeg -version.
+10. Verify the installation by opening a Command Prompt and running: ffmpeg -version
 
 * macOS:
 
