@@ -18,7 +18,7 @@ npm install
 5. Import them accordingly to the MongoDB collections.
    
 ## Downloading and Installing FFmpeg
-* Download FFmpeg:
+# Download FFmpeg:
 
 1. Visit the FFmpeg official download page.
 2. Choose the appropriate version for your operating system (Windows, macOS, or Linux).
@@ -39,6 +39,49 @@ BtbN builds
 10. Click "New" and add the path to the FFmpeg bin folder (e.g., C:\ffmpeg\bin).
 11. Click "OK" to close all windows.
 12. Verify the installation by opening a Command Prompt and running ffmpeg -version.
+
+* macOS:
+
+1. Install Homebrew if you haven't already:
+```
+sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Use Homebrew to install FFmpeg:
+```
+sh
+brew install ffmpeg
+```
+Verify the installation by opening Terminal and running ffmpeg -version.
+Linux:
+
+Go to the FFmpeg download page for Linux.
+Choose the appropriate package for your distribution. For example, for Ubuntu/Debian:
+Open your terminal.
+Update your package list:
+sh
+Copy code
+sudo apt update
+Install FFmpeg:
+sh
+Copy code
+sudo apt install ffmpeg
+Verify the installation by running ffmpeg -version.
+Creating a .env File for Cloudinary
+Create a .env File:
+
+In the root directory of your project, create a file named .env.
+Add Your Cloudinary Credentials:
+
+Open the .env file in a text editor.
+
+Add the following lines, replacing your_cloud_name, your_api_key, and your_api_secret with your actual Cloudinary credentials:
+
+sh
+Copy code
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
 
 ## Start the Application
 npm start
