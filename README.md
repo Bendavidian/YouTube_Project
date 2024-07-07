@@ -115,7 +115,7 @@ Open the app in your browser by navigating to 'http://localhost:8080/'.
 * As a guest, you can watch videos and see which videos belong to which subscribers by clicking on the image of the person who uploaded the video on the home screen, clicking on the left menu, and selecting a specific subscription, or clicking on the author's image or name while watching any video.
 * You can press the login button to go to the login screen or a logout button if you are recognized as a user.
 * To get all the features that the application offers, you will need to create a new user and register or use this distributive user on the sign-in page:
-  * Email: bend@gmail.com
+  * Email: bendben13@gmail.com
   * Password: ben12345
 * As a registered user, and only when connected, you will see two additional buttons at the top of the screen: one for uploading a new video and the other for settings where you can edit your user data. Additionally, you can click on your picture to see all the videos you have uploaded. Alternatively, you can click on the left menu and then on "Your videos" to display all your uploaded videos.
 
@@ -128,6 +128,7 @@ Open the app in your browser by navigating to 'http://localhost:8080/'.
 #### Sign-Up Page
 * To create a new user in our YouTube app, fill in all required fields. The email must follow the pattern name@example.com. The password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji. Confirm your password, choose your display name, and upload a profile photo. Upon successful submission, you will be redirected to the sign-in page.
 * If you change your mind and want to return to the home page as a guest, click on the "YouTube" icon in the upper-left part of the registration screen or log in to the application.
+* Each time a new user registers, his password is encrypted, thus preserving the security of the user's information. In the database, the password that will be visible to that user will already be after the encryption.
 
 #### New Video
 * Registered users can upload new videos using the button on the upper-right side. Clicking this button opens a modal where you can enter the video title, description, and the video itself. After uploading, you will receive a success message and be redirected to the home page.
