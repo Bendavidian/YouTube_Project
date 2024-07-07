@@ -44,29 +44,30 @@ BtbN builds
 
 1. Install Homebrew if you haven't already:
 ```
-sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 Use Homebrew to install FFmpeg:
 ```
-sh
 brew install ffmpeg
 ```
-Verify the installation by opening Terminal and running ffmpeg -version.
-Linux:
+Verify the installation by opening Terminal and running 
+```
+ffmpeg -version.
+```
+* Linux:
 
-Go to the FFmpeg download page for Linux.
-Choose the appropriate package for your distribution. For example, for Ubuntu/Debian:
-Open your terminal.
-Update your package list:
-sh
-Copy code
+1. Go to the FFmpeg download page for Linux.
+2. Choose the appropriate package for your distribution. For example, for Ubuntu/Debian:
+3. Open your terminal.
+4. Update your package list:
+```
 sudo apt update
+```
 Install FFmpeg:
-sh
-Copy code
+```
 sudo apt install ffmpeg
-Verify the installation by running ffmpeg -version.
+```
+Verify the installation by running ``` ffmpeg -version ```.
 Creating a .env File for Cloudinary
 Create a .env File:
 
@@ -75,13 +76,13 @@ Add Your Cloudinary Credentials:
 
 Open the .env file in a text editor.
 
-Add the following lines, replacing your_cloud_name, your_api_key, and your_api_secret with your actual Cloudinary credentials:
+Add the following lines:
 
-sh
-Copy code
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
+```
+CLOUDINARY_CLOUD_NAME = dz01eqj7b
+CLOUDINARY_API_KEY = 954329195243675
+CLOUDINARY_API_SECRET = kncvBsv6wj4jO8CcONK3N8b35MY
+```
 
 ## Start the Application
 npm start
