@@ -4,7 +4,7 @@
 # Downloading and Installing FFmpeg
 # Download FFmpeg:
 
-1. Visit the FFmpeg official download page. [Link Text](https://www.ffmpeg.org/download.html)
+1. Visit the FFmpeg official download page. [FFMPEG](https://www.ffmpeg.org/download.html)
 2. Choose the appropriate version for your operating system (Windows, macOS, or Linux).
 3. Installing FFmpeg:
 
