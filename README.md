@@ -53,7 +53,7 @@ sudo apt install ffmpeg
    
 ## Setting up the project
 ## Download MongoDB
-[Download MongoDB](https://www.gyan.dev/ffmpeg/builds/](https://www.mongodb.com/try/download/community)
+[Download MongoDB](https://www.mongodb.com/try/download/community)
 #### Create a MongoDB Database
 1. Create a new connection with this connection string: 'mongodb://localhost:27017/'
 2. Create a database called Youtube
