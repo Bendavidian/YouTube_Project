@@ -72,13 +72,13 @@ Creating a .env File for Cloudinary
 Create a .env File:
 
 In the root directory of your project, create a file named .env.
-Add Your Cloudinary Credentials:
-
 Open the .env file in a text editor.
 
 Add the following lines:
 
 ```
+JWT_SECRET = s3cr3tK3y#2024!@r@nd0mJWT
+JWT_REFRESH_SECRET = s3cr3tK3y#2024!@r@nd0mJWT
 CLOUDINARY_CLOUD_NAME = dz01eqj7b
 CLOUDINARY_API_KEY = 954329195243675
 CLOUDINARY_API_SECRET = kncvBsv6wj4jO8CcONK3N8b35MY
