@@ -1,10 +1,10 @@
 # Welcome to Our YouTube Server Platform for Web!
 #### how to run the server?
 ## Clone the Repository
-### git clone https://github.com/Bendavidian/YouTube_Project.git
-### cd YouTube_Project
-### git checkout final-upload
-### cd backend
+* git clone https://github.com/Bendavidian/YouTube_Project.git
+* cd YouTube_Project
+* git checkout final-upload
+* cd backend
 ## Install Dependencies
 npm install
 ## Create a MongoDB Database
