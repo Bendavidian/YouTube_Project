@@ -1,22 +1,6 @@
 # Welcome to Our YouTube Server Platform for Web!
 #### how to run the server?
-## Clone the Repository
-* git clone https://github.com/Bendavidian/YouTube_Project.git
-* cd YouTube_Project
-* git checkout final-upload
-* cd backend
-## Install Dependencies
-npm install
-## Create a MongoDB Database
-1. Create a new connection with this connection string: 'mongodb://localhost:27017/'
-2. Create a database called Youtube
-3. Create three collections: 'users', 'videos', and 'comments'
-4. Download the JSON files from the 'DataBaseJsons' directory:
-   * 'DataBaseJsons/Youtube.comments.json'
-   * 'DataBaseJsons/Youtube.users.json'
-   * 'DataBaseJsons/Youtube.videos.json'
-5. Import them accordingly to the MongoDB collections.
-   
+
 ## Downloading and Installing FFmpeg
 # Download FFmpeg:
 
@@ -63,26 +47,28 @@ ffmpeg -version.
 ```
 sudo apt update
 ```
-Install FFmpeg:
+5. Install FFmpeg:
 ```
 sudo apt install ffmpeg
 ```
-Verify the installation by running ``` ffmpeg -version ```.
-Creating a .env File for Cloudinary
-Create a .env File:
-
-In the root directory of your project, create a file named .env.
-Open the .env file in a text editor.
-
-Add the following lines:
-
-```
-JWT_SECRET = s3cr3tK3y#2024!@r@nd0mJWT
-JWT_REFRESH_SECRET = s3cr3tK3y#2024!@r@nd0mJWT
-CLOUDINARY_CLOUD_NAME = dz01eqj7b
-CLOUDINARY_API_KEY = 954329195243675
-CLOUDINARY_API_SECRET = kncvBsv6wj4jO8CcONK3N8b35MY
-```
+6. Verify the installation by running ``` ffmpeg -version ```.
+   
+## Clone the Repository
+* git clone https://github.com/Bendavidian/YouTube_Project.git
+* cd YouTube_Project
+* git checkout final-upload
+* cd backend
+## Install Dependencies
+npm install
+## Create a MongoDB Database
+1. Create a new connection with this connection string: 'mongodb://localhost:27017/'
+2. Create a database called Youtube
+3. Create three collections: 'users', 'videos', and 'comments'
+4. Download the JSON files from the 'DataBaseJsons' directory:
+   * 'DataBaseJsons/Youtube.comments.json'
+   * 'DataBaseJsons/Youtube.users.json'
+   * 'DataBaseJsons/Youtube.videos.json'
+5. Import them accordingly to the MongoDB collections.
 
 ## Start the Application
 npm start
