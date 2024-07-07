@@ -18,27 +18,27 @@ npm install
 5. Import them accordingly to the MongoDB collections.
    
 ## Downloading and Installing FFmpeg
-1. Download FFmpeg:
+* Download FFmpeg:
 
-* Visit the FFmpeg official download page.
-* Choose the appropriate version for your operating system (Windows, macOS, or Linux).
-* Installing FFmpeg:
+1. Visit the FFmpeg official download page.
+2. Choose the appropriate version for your operating system (Windows, macOS, or Linux).
+3. Installing FFmpeg:
 
-Windows:
+* Windows:
 
-* Go to the FFmpeg download page for Windows.
-* Click on the link under the "Windows" section. You will be redirected to a page listing different builds.
-* Download the latest "static" build from one of the following trusted sources:
+1. Go to the FFmpeg download page for Windows.
+2. Click on the link under the "Windows" section. You will be redirected to a page listing different builds.
+3. Download the latest "static" build from one of the following trusted sources:
 BtbN builds
-* Look for a file named similar to ffmpeg-release-full.7z or ffmpeg-n4.4.1-win64-static.zip.
-* Extract the downloaded zip file to a directory (e.g., C:\ffmpeg).
-* Add FFmpeg to your system PATH:
-* Open the Start menu, search for "Environment Variables", and select "Edit the system environment variables".
-* Click on the "Environment Variables" button.
-* Under "System variables", find and select the "Path" variable, then click "Edit".
-* Click "New" and add the path to the FFmpeg bin folder (e.g., C:\ffmpeg\bin).
-* Click "OK" to close all windows.
-* Verify the installation by opening a Command Prompt and running ffmpeg -version.
+4. Look for a file named similar to ffmpeg-release-full.7z or ffmpeg-n4.4.1-win64-static.zip.
+5. Extract the downloaded zip file to a directory (e.g., C:\ffmpeg).
+6. Add FFmpeg to your system PATH:
+7. Open the Start menu, search for "Environment Variables", and select "Edit the system environment variables".
+8. Click on the "Environment Variables" button.
+9. Under "System variables", find and select the "Path" variable, then click "Edit".
+10. Click "New" and add the path to the FFmpeg bin folder (e.g., C:\ffmpeg\bin).
+11. Click "OK" to close all windows.
+12. Verify the installation by opening a Command Prompt and running ffmpeg -version.
 
 ## Start the Application
 npm start
