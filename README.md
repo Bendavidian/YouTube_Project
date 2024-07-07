@@ -37,7 +37,7 @@ Open the app in your browser by navigating to 'http://localhost:8080/'.
 #### Additional Features
 * User Authentication: Added JWT-based authentication for secure sessions. When a user logs in, they receive two types of tokens:
   * Refresh-token: Deleted after a week, requiring the user to reauthenticate.
-  * Access-token: Automatically updated and used for user verification for any action in the application.
+  * Access-token: Automatically renews every hour and used for user verification for any action in the application.
  
 ## About Our Project
 #### Home Page
