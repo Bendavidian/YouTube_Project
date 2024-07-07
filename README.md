@@ -51,14 +51,29 @@ sudo apt install ffmpeg
 ```
 6. Verify the installation by running ``` ffmpeg -version ```.
    
-## Clone the Repository
-* git clone https://github.com/Bendavidian/YouTube_Project.git
-* cd YouTube_Project
-* git checkout final-upload
-* cd backend
-## Install Dependencies
+## Setting up the project
+
+#### Clone the repository
+```
+git clone https://github.com/Bendavidian/YouTube_Project.git
+cd YouTube_Project
+git checkout final-upload
+```
+
+#### Build the frontend
+```
+cd frontend
 npm install
-## Create a MongoDB Database
+npm run build
+```
+
+#### Install the backend dependencies
+```
+cd ../backend
+npm install
+```
+
+#### Create a MongoDB Database
 1. Create a new connection with this connection string: 'mongodb://localhost:27017/'
 2. Create a database called Youtube
 3. Create three collections: 'users', 'videos', and 'comments'
