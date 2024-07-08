@@ -131,7 +131,7 @@ Open the app in your browser by navigating to 'http://localhost:8080/'.
 * Each time a new user registers, his password is encrypted, thus preserving the security of the user's information. In the database, the password that will be visible to that user will already be after the encryption.
 
 #### New Video
-* Registered users can upload new videos using the button on the upper-right side. Clicking this button opens a modal where you can enter the video title, description, and the video itself (in mp4 format). After uploading, you will receive a success message and be redirected to the home page.
+* Registered users can upload new videos using the button on the upper-right side. Clicking this button opens a modal where you can enter the video title, description, and the video itself ( mp4 format). After uploading, you will receive a success message and be redirected to the home page.
 * When uploading a video, the thumbnail that appears on the video card is created and saved automatically about 7 seconds after the video starts playing. Therefore, you do not need to upload a separate picture when uploading a new video.
 
 #### Dark Mode
