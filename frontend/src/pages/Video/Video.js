@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import api from "../../api/axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Col, Container, Row, Spinner, Button, Form } from "react-bootstrap";
-import { useVideoContext } from "../../context/VideoContext";   
+import { useVideoContext } from "../../context/VideoContext";
 import { useUser } from "../../context/UserContext";
 import { GrLike } from "react-icons/gr";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -93,12 +93,21 @@ const VideoPlayer = () => {
       },
       ...(comments || []),
     ];
-    setComments(updatedComments);
 
     try {
-      await api.post("comments/new", {
+      const response = await api.post("comments/new", {
         ...newComment,
       });
+      const newCommentFromServer = response.data.comment;
+      const updatedComments = [
+        {
+          ...newCommentFromServer,
+          userId: { ...user },
+        },
+        ...(comments || []),
+      ];
+
+      setComments(updatedComments);
 
       console.log("comment created succesfully");
     } catch (err) {
@@ -111,28 +120,52 @@ const VideoPlayer = () => {
     setIsEditing(true); // Enable editing mode
   };
 
-  const handleEditComment = (id, content) => {
-    setEditingCommentId(id); // Set the comment ID being edited
+  const handleEditComment = (commentId, content) => {
+    setEditingCommentId(commentId); // Set the comment ID being edited
     setNewCommentContent(content); // Set the new comment content
   };
 
-  const handleSaveComment = (id) => {
-    // Save edited comment
-    const updatedComments = comments.map((comment, index) =>
-      index === id ? { ...comment, comment: newCommentContent } : comment
-    );
+  const handleSaveComment = async (commentId) => {
+    try {
+      // Send PUT request to update the comment
+      await api.put(`/comments/${commentId}`, {
+        newComment: newCommentContent,
+      });
 
-    setComments(updatedComments);
+      // Update the comment in the state
+      const updatedComments = comments.map((comment) =>
+        comment._id === commentId
+          ? { ...comment, comment: newCommentContent }
+          : comment
+      );
+      setComments(updatedComments);
 
-    setEditingCommentId(null); // Reset editing state
-    setNewCommentContent(""); // Clear new comment content
+      console.log("Comment updated successfully");
+
+      // Reset editing state
+      setEditingCommentId(null);
+      setNewCommentContent("");
+    } catch (error) {
+      console.error("Error updating comment:", error);
+    }
   };
 
-  const handleDeleteComment = (id) => {
-    // Delete a comment
-    const updatedComments = comments.filter((_, index) => index !== id);
+  const handleDeleteComment = async (commentId) => {
+    try {
+      console.log(commentId);
+      // Send DELETE request to the backend
+      await api.delete(`/comments/${commentId}`);
+      console.log("deleted");
+      // Filter out the deleted comment from the state
+      const updatedComments = comments.filter(
+        (comment) => comment._id !== commentId
+      );
+      setComments(updatedComments);
 
-    setComments(updatedComments);
+      console.log("Comment deleted successfully");
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+    }
   };
 
   const handleLike = () => {
@@ -210,7 +243,7 @@ const VideoPlayer = () => {
   }
 
   if (!video) {
-     // Render a message if the video is not found
+    // Render a message if the video is not found
     return <div className="not-found-message">Video not found!</div>;
   }
 
@@ -337,7 +370,7 @@ const VideoPlayer = () => {
                   <button className="btn-c btn2">Add comment</button>
                 </form>
                 <div className="comments">
-                  {comments?.map((comment, index) => (
+                  {comments?.map((comment) => (
                     <div
                       key={comment._id}
                       style={{
@@ -358,7 +391,7 @@ const VideoPlayer = () => {
                           }}
                         />
                         &bull; <span>{comment.userId?.username}</span>
-                        {editingCommentId === index ? (
+                        {editingCommentId === comment._id ? (
                           <>
                             <Form.Control
                               type="text"
@@ -367,7 +400,9 @@ const VideoPlayer = () => {
                                 setNewCommentContent(e.target.value)
                               }
                             />
-                            <Button onClick={() => handleSaveComment(index)}>
+                            <Button
+                              onClick={() => handleSaveComment(comment._id)}
+                            >
                               Save
                             </Button>
                             <Button
@@ -389,7 +424,7 @@ const VideoPlayer = () => {
                               cursor: "pointer",
                             }}
                             onClick={() =>
-                              handleEditComment(index, comment.comment)
+                              handleEditComment(comment._id, comment.comment)
                             }
                           >
                             <CiEdit />
@@ -399,7 +434,7 @@ const VideoPlayer = () => {
                               marginLeft: "10px",
                               cursor: "pointer",
                             }}
-                            onClick={() => handleDeleteComment(index)}
+                            onClick={() => handleDeleteComment(comment._id)}
                           >
                             <RiDeleteBin6Line />
                           </span>
