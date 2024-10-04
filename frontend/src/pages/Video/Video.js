@@ -21,6 +21,7 @@ const VideoPlayer = () => {
   const { user } = useUser(); // Get the current user from context
   const [video, setVideo] = useState(null); // State for the current video
   const [loading, setLoading] = useState(true); // State for loading status
+  const [recommendedVideos, setRecommendedVideos] = useState([]);
 
   // States for comments, likes, dislikes, and editing
   const [comment, setComment] = useState("");
@@ -69,6 +70,32 @@ const VideoPlayer = () => {
 
     fetchVideoById(); // Fetch the video data
   }, [id]);
+
+  const fetchRecommendedVideos = async () => {
+    try {
+      const response = await api.post("/videos/recommendations", {
+        userId: user._id,
+        videoId: id, // Current video ID
+      });
+
+      setRecommendedVideos(response.data.videos); // Set recommended videos in state
+    } catch (error) {
+      console.error("Error fetching recommended videos:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (!id) return; // Early return if no video ID is provided
+
+    if (user) {
+      // If the user is logged in, fetch personalized recommendations
+      fetchRecommendedVideos();
+    } else {
+      // If the user is a guest (not logged in), show the first 10 videos from fetchedVideos
+      const guestRecommendedVideos = fetchedVideos.slice(0, 10);
+      setRecommendedVideos(guestRecommendedVideos); // Set the first 10 videos as the recommendations
+    }
+  }, [user, id, fetchedVideos]);
 
   const isAuthor = user?._id === video?.author._id; // Check if the current user is the author
 
@@ -450,36 +477,40 @@ const VideoPlayer = () => {
         </Col>
         <Col md={1}></Col>
         <Col md={3}>
-          {fetchedVideos?.map((video) => (
-            <div
-              className="video-card"
-              key={video._id}
-              onClick={() => navigate(`/video/${video._id}`)}
-            >
-              <img src={video.thumbnail} width="280px" alt={video.title} />
-              <div className="col">
-                <h3>{video.title}</h3>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <img
-                    src={video?.author?.avatar}
-                    alt="author avatar"
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                      marginRight: "10px",
-                    }}
-                  />
-                  <p>{video.author?.username}</p>
-                </div>
-                <div>
-                  <span>{video.views.toLocaleString()} views</span> &bull;{" "}
-                  <span>{timeAgo(new Date(video.createdAt))}</span>
+          {recommendedVideos.length > 0 ? (
+            recommendedVideos.map((video) => (
+              <div
+                className="video-card"
+                key={video._id}
+                onClick={() => navigate(`/video/${video._id}`)}
+              >
+                <img src={video.thumbnail} width="280px" alt={video.title} />
+                <div className="col">
+                  <h3>{video.title}</h3>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={video.author?.avatar}
+                      alt="author avatar"
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        marginRight: "10px",
+                      }}
+                    />
+                    <p>{video.author?.username}</p>
+                  </div>
+                  <div>
+                    <span>{video.views.toLocaleString()} views</span> &bull;{" "}
+                    <span>{timeAgo(new Date(video.createdAt))}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>No recommendations available.</p>
+          )}
         </Col>
       </Row>
       <SocialMediaModal
