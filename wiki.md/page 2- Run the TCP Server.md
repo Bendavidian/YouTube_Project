@@ -3,7 +3,7 @@ The TCP server written in C++ works in conjunction with the Node.js server to ha
 frontend for the user. This interaction enables efficient video recommendations based on user behavior.
 
 
-# Video Recommendation Algorithm:
+### Video Recommendation Algorithm:
 Our video recommendation system is designed to provide users with personalized video suggestions based on their watch history and video popularity among similar users.
 For each user, we maintain a list of videos they have watched. When a user watches a video, it is added to their watch history if it isn't already there, and the video's popularity score increases.
 Each video is assigned a popularity score, which increments every time a user watches that video (views).
