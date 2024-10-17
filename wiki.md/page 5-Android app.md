@@ -81,3 +81,4 @@ The user button at the bottom of the page will redirect you to your profile page
 ![Screenshot_20241017_191116_YouTube](https://github.com/user-attachments/assets/1c2835ad-af32-4791-8bcd-398316c2b715)
 ![Screenshot_20241017_191121_YouTube](https://github.com/user-attachments/assets/8cc37d35-a5cb-463b-8223-8a35071fd402)
 ![Screenshot_20241017_191147_YouTube](https://github.com/user-attachments/assets/51fbe39a-f104-4cd5-bde7-90b795689c72)
+<img width="148" alt="Screenshot 2024-10-17 191623" src="https://github.com/user-attachments/assets/d5ea6e42-8387-4716-8a26-789af1a314a0">
