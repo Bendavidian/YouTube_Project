@@ -64,3 +64,20 @@ The user button at the bottom of the page will redirect you to your profile page
 * After signing in, you will see a "+" button at the bottom of the page, allowing you to upload new videos.
   And in addition, a user button  where you can edit your user profile, and also see all the videos you have uploaded.
 * Options to edit and delete videos you have uploaded will become available by pressing on the user button, choosing the video, and pressing on the "Delete" or "Edit" buttons.
+
+#### Comments on Videos
+* Only signed-in users can comment on videos, edit their comments, or delete their comments.
+* After signing in, you can add comments to videos by typing in the comment box and submitting.
+* You will also see options to edit or delete comments on videos.
+  
+#### Update and Delete Users
+* To update or delete an account, the user must be logged in and access their own page. 
+* The user can edit their display name, Email and profile picture.
+* Deleting a user will also delete all videos uploaded by them, comments on these videos, and comments published by them on other videos.
+
+![Screenshot_20241017_144906_YouTube](https://github.com/user-attachments/assets/1959f711-2627-4305-969e-112ffde3c284)
+![Screenshot_20241017_144934_YouTube](https://github.com/user-attachments/assets/2e97992b-8fbb-4882-b792-7aeb5fd2031e)
+![Screenshot_20241017_145623_YouTube](https://github.com/user-attachments/assets/bde7d1e5-99f1-416d-81b5-262d32828f7c)
+![Screenshot_20241017_191116_YouTube](https://github.com/user-attachments/assets/1c2835ad-af32-4791-8bcd-398316c2b715)
+![Screenshot_20241017_191121_YouTube](https://github.com/user-attachments/assets/8cc37d35-a5cb-463b-8223-8a35071fd402)
+![Screenshot_20241017_191147_YouTube](https://github.com/user-attachments/assets/51fbe39a-f104-4cd5-bde7-90b795689c72)
