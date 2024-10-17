@@ -75,10 +75,5 @@ The user button at the bottom of the page will redirect you to your profile page
 * The user can edit their display name, Email and profile picture.
 * Deleting a user will also delete all videos uploaded by them, comments on these videos, and comments published by them on other videos.
 
-![Screenshot_20241017_144906_YouTube](https://github.com/user-attachments/assets/1959f711-2627-4305-969e-112ffde3c284)
-![Screenshot_20241017_144934_YouTube](https://github.com/user-attachments/assets/2e97992b-8fbb-4882-b792-7aeb5fd2031e)
-![Screenshot_20241017_145623_YouTube](https://github.com/user-attachments/assets/bde7d1e5-99f1-416d-81b5-262d32828f7c)
-![Screenshot_20241017_191116_YouTube](https://github.com/user-attachments/assets/1c2835ad-af32-4791-8bcd-398316c2b715)
-![Screenshot_20241017_191121_YouTube](https://github.com/user-attachments/assets/8cc37d35-a5cb-463b-8223-8a35071fd402)
-![Screenshot_20241017_191147_YouTube](https://github.com/user-attachments/assets/51fbe39a-f104-4cd5-bde7-90b795689c72)
-<img width="148" alt="Screenshot 2024-10-17 191623" src="https://github.com/user-attachments/assets/d5ea6e42-8387-4716-8a26-789af1a314a0">
+
+![Screenshot_20241017_144906_YouTube](https://github.com/user-attachments/assets/10bef6d6-108c-42b4-99f0-507acee0bb1e)
