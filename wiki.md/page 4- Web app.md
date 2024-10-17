@@ -1,7 +1,7 @@
 # Page 4 - The Web Youtube App
 
 ## Before we begin
-In oreder to demonstrate all of the functions and actions you can do in our app you can check out the next video if you would like to :<br>
+In order to demonstrate all of the functions and actions you can do in our app you can check out the next video if you would like to :<br>
 https://youtu.be/p_qqiLqK70M
 ## Development Process
 #### Server Development
