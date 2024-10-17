@@ -76,6 +76,11 @@ The user button at the bottom of the page will redirect you to your profile page
 * Deleting a user will also delete all videos uploaded by them, comments on these videos, and comments published by them on other videos.
 
 ![Screenshot_20241017_144906_YouTube1](https://github.com/user-attachments/assets/42a844ae-b914-4dc3-b269-b9df35fc2fee)
+![Screenshot_20241017_144934_YouTube](https://github.com/user-attachments/assets/2a8785cb-c886-4635-a8d4-d64fe6e034ec)
+![Screenshot_20241017_191147_YouTube](https://github.com/user-attachments/assets/36497935-6376-448d-926c-d293f4bb100a)
+![Screenshot_20241017_191116_YouTube](https://github.com/user-attachments/assets/904a39d3-de94-4ac4-83f8-a849052a56cd)
+![Screenshot_20241017_191121_YouTube](https://github.com/user-attachments/assets/f1331f48-0045-4e9d-bc0d-193391c7ab21)
+![Screenshot_20241017_145514_YouTube](https://github.com/user-attachments/assets/40688d0b-2d4f-46f4-800f-178ba300366f)
 
 
 
