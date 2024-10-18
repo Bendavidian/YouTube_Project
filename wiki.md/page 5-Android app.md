@@ -14,16 +14,14 @@ The repositories (e.g., UserRepository.java, VideoRepository.java, and CommentRe
  communicate with the DAOs to fetch data locally when available. 
 If the data is not present in the local database, the repository will call the API to fetch it from the server and cache it
 in Room.
-### Authentication
-For secure user authentication, we implemented a JWT-based authentication system. This ensures that users can perform actions
-only after successful login.
-The AuthenticationInterceptor attaches tokens to every outgoing request, ensuring protected endpoints are securely accessed
-by verified users.
 ### Retrofit Integration
 We used Retrofit in the RetrofitBuilder.java to create API services and handle network requests to the server.
 Each API call (e.g., user login, fetch comments, video interactions) is built and handled seamlessly via Retrofit's interface.
 WebServiceAPI handles global configurations for Retrofit, making it easier to initialize network connections across
 different API endpoints.
+Authentication:
+For secure user authentication, we implemented a JWT-based authentication system. This ensures that users can perform actions
+only after successful login.
 ### Repository and ViewModel Layers
 We introduced repositories and view models to adhere to the MVVM (Model-View-ViewModel) architecture.
 
