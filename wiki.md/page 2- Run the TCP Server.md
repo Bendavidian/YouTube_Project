@@ -21,17 +21,16 @@ You also need to make sure you have tools that are used to compile C++ progr
 open the terminal and run these:<br>
 -sudo apt-get update<br>
 -sudo apt-get install -y g++.<br>
--sudo apt-get install lightest-dev cmake<br>
 
 ### How to compile and run our program:
 
-1. download our TCPServer file (from branch "ben part 4"!) 
+1. download our TCPServer file.
 [(https://github.com/Bendavidian/YouTube_Project.git)](https://github.com/Bendavidian/YouTube_Project/tree/Ben-part-4)
 2. put the next commands in that folder on the terminal:
 3. cd src
-4. make
+4. g++ -pthread server.cpp VideoRecommender.cpp -o server -std=c++11
 5. ./server
-6. our program is now running on your computer!
+ our program is now running on your computer!
 
 
 
