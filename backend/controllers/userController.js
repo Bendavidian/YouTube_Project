@@ -6,6 +6,9 @@ const User = require("../models/User");
 const Comment = require("../models/Comment");
 const cloudinary = require("../scripts/cloudinary");
 const { getVideoDuration } = require("../utils/getVideoDuration");
+const {
+  initializeTcpServerWithVideos,
+} = require("../controllers/videoController");
 
 // Get videos by user ID
 const getVideoById = async (req, res) => {
@@ -102,6 +105,7 @@ const deleteVideoById = async (req, res) => {
     if (!video) {
       return res.status(404).json({ message: "Video not found" });
     }
+    await initializeTcpServerWithVideos();
     console.log("Deleted video:", video);
     res.json({ message: "Video deleted successfully" });
   } catch (error) {
@@ -165,11 +169,10 @@ const uploadVideo = async (req, res) => {
       author: userId,
       views: randomViews,
       likes: randomLikes,
-      tags: [], 
+      tags: [],
       comments: [],
     });
 
-    
     await video.save();
 
     const duration = await getVideoDuration(req.file.path);
@@ -177,7 +180,7 @@ const uploadVideo = async (req, res) => {
 
     // Save the video document with updated duration
     await video.save();
-
+    await initializeTcpServerWithVideos(); // Ensure the call is awaited to handle async code
     // Populate the video document with author details
     const populatedVideo = await Video.findById(video._id).populate(
       "author",

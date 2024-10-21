@@ -3,6 +3,7 @@ const ffmpeg = require("fluent-ffmpeg");
 const fs = require("fs-extra");
 const Video = require("../models/Video");
 const { getVideoDuration } = require("../utils/getVideoDuration");
+const net = require("net");
 
 const getAllVideos = async (req, res) => {
   console.log("getAllVideos: Start fetching videos"); // Add log before operation
@@ -143,6 +144,7 @@ const deleteVideoById = async (req, res) => {
     if (!video) {
       return res.status(404).json({ message: "Video not found" });
     }
+
     console.log("Deleted video:", video);
     res.json({ message: "Video deleted successfully" });
   } catch (error) {
@@ -182,7 +184,6 @@ const captureScreenshot = (videoFilePath, outputImagePath) => {
 const uploadVideo = async (req, res) => {
   const { title, description } = req.body;
   const { userId } = req.user; // Get user ID from the authenticated user
-
   try {
     const videoFilePath = `http://localhost:8080/uploads/videos/${req.file.filename}`;
     const thumbnailFilename = `${Date.now()}_thumbnail.jpg`;
@@ -219,7 +220,6 @@ const uploadVideo = async (req, res) => {
 
     // Save the video document with updated duration
     await video.save();
-
     // Populate the video document with author details
     const populatedVideo = await Video.findById(video._id).populate(
       "author",
@@ -235,6 +235,111 @@ const uploadVideo = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+// Function to communicate with the TCP server
+const getRecommendationsFromTcpServer = (userId, videoId) => {
+  return new Promise((resolve, reject) => {
+    const client = new net.Socket();
+
+    client.connect(5555, "127.0.0.1", () => {
+      console.log("Connected to TCP server");
+
+      // Send userId and videoId to the server (concatenate with space or other delimiter)
+      client.write(`RECOMMEND ${userId} ${videoId}`);
+    });
+
+    // Handle data received from the server
+    client.on("data", (data) => {
+      console.log("Received from server: " + data);
+
+      // Resolve the promise with the response (string of video IDs)
+      resolve(data.toString());
+
+      // Close the connection after receiving data
+      client.destroy();
+    });
+
+    // Handle any error during communication
+    client.on("error", (err) => {
+      console.error("Error communicating with TCP server:", err);
+      reject(err);
+    });
+
+    // Handle close event
+    client.on("close", () => {
+      console.log("Connection to TCP server closed");
+    });
+  });
+};
+
+// New controller function to handle requests from the frontend
+const getVideoRecommendations = async (req, res) => {
+  const { userId, videoId } = req.body; // Get userId and videoId from frontend request
+
+  try {
+    // Call the TCP function to get recommendations
+    const recommendedVideoIds = await getRecommendationsFromTcpServer(
+      userId,
+      videoId
+    );
+
+    // Process the received video IDs from the TCP server and remove any empty elements
+    const videoIdArray = recommendedVideoIds
+      .split(" ")
+      .filter((id) => id.trim() !== "");
+
+    // Fetch video details from the database using the video IDs
+    const recommendedVideos = await Video.find({
+      _id: { $in: videoIdArray },
+    }).populate("author", "username avatar");
+
+    // Return the recommended videos to the frontend
+    res.status(200).json({
+      message: "Video recommendations fetched successfully",
+      videos: recommendedVideos,
+    });
+  } catch (error) {
+    console.error("Error fetching video recommendations:", error);
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};
+
+// Function to send all videos and their views to the TCP server
+const initializeTcpServerWithVideos = async () => {
+  try {
+    // Fetch all videos from the database
+    const videos = await Video.find();
+    console.log("bendben");
+
+    if (!videos || videos.length === 0) {
+      console.log("No videos found to send to the TCP server.");
+      return;
+    }
+
+    // Format the data as "videoId views" pairs
+    const videoData = videos
+      .map((video) => `${video._id.toString()} ${video.views}`)
+      .join(" ");
+
+    // Create a TCP connection to the server
+    const client = new net.Socket();
+
+    client.connect(5555, "127.0.0.1", () => {
+      console.log("Connected to TCP server for initialization");
+
+      // Send the video data to the TCP server
+      client.write(`INIT ${videoData}`);
+
+      client.destroy(); // Close the connection after sending
+      console.log("Sent video data to TCP server for initialization");
+    });
+
+    client.on("error", (err) => {
+      console.error("Error sending video data to TCP server:", err);
+    });
+  } catch (error) {
+    console.error("Error initializing TCP server with videos:", error);
+  }
+};
 
 module.exports = {
   getAllVideos,
@@ -243,4 +348,6 @@ module.exports = {
   deleteVideoById,
   uploadVideo,
   get20Videos,
+  getVideoRecommendations,
+  initializeTcpServerWithVideos,
 };

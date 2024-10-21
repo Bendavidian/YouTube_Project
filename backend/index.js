@@ -8,6 +8,9 @@ const videoRoutes = require("./routes/videoRoutes");
 const authRoutes = require("./routes/authRoutes");
 const commentRoutes = require("./routes/commentRoutes");
 const userRoutes = require("./routes/userRoutes");
+const {
+  initializeTcpServerWithVideos,
+} = require("./controllers/videoController");
 
 // Import models to ensure they are loaded
 require("./models/User");
@@ -18,7 +21,10 @@ const app = express();
 const port = 8080;
 
 // Connect to the database
-connectDB();
+connectDB().then(() => {
+  // Initialize TCP server with videos after the DB connection is established
+  initializeTcpServerWithVideos();
+});
 
 // Middleware to parse JSON
 app.use(express.json());

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import api from "../../api/axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Col, Container, Row, Spinner, Button, Form } from "react-bootstrap";
-import { useVideoContext } from "../../context/VideoContext";   
+import { useVideoContext } from "../../context/VideoContext";
 import { useUser } from "../../context/UserContext";
 import { GrLike } from "react-icons/gr";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -21,6 +21,7 @@ const VideoPlayer = () => {
   const { user } = useUser(); // Get the current user from context
   const [video, setVideo] = useState(null); // State for the current video
   const [loading, setLoading] = useState(true); // State for loading status
+  const [recommendedVideos, setRecommendedVideos] = useState([]);
 
   // States for comments, likes, dislikes, and editing
   const [comment, setComment] = useState("");
@@ -70,6 +71,32 @@ const VideoPlayer = () => {
     fetchVideoById(); // Fetch the video data
   }, [id]);
 
+  const fetchRecommendedVideos = async () => {
+    try {
+      const response = await api.post("/videos/recommendations", {
+        userId: user._id,
+        videoId: id, // Current video ID
+      });
+
+      setRecommendedVideos(response.data.videos); // Set recommended videos in state
+    } catch (error) {
+      console.error("Error fetching recommended videos:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (!id) return; // Early return if no video ID is provided
+
+    if (user) {
+      // If the user is logged in, fetch personalized recommendations
+      fetchRecommendedVideos();
+    } else {
+      // If the user is a guest (not logged in), show the first 10 videos from fetchedVideos
+      const guestRecommendedVideos = fetchedVideos.slice(0, 10);
+      setRecommendedVideos(guestRecommendedVideos); // Set the first 10 videos as the recommendations
+    }
+  }, [user, id, fetchedVideos]);
+
   const isAuthor = user?._id === video?.author._id; // Check if the current user is the author
 
   const handleComment = async (e) => {
@@ -93,12 +120,21 @@ const VideoPlayer = () => {
       },
       ...(comments || []),
     ];
-    setComments(updatedComments);
 
     try {
-      await api.post("comments/new", {
+      const response = await api.post("comments/new", {
         ...newComment,
       });
+      const newCommentFromServer = response.data.comment;
+      const updatedComments = [
+        {
+          ...newCommentFromServer,
+          userId: { ...user },
+        },
+        ...(comments || []),
+      ];
+
+      setComments(updatedComments);
 
       console.log("comment created succesfully");
     } catch (err) {
@@ -111,28 +147,52 @@ const VideoPlayer = () => {
     setIsEditing(true); // Enable editing mode
   };
 
-  const handleEditComment = (id, content) => {
-    setEditingCommentId(id); // Set the comment ID being edited
+  const handleEditComment = (commentId, content) => {
+    setEditingCommentId(commentId); // Set the comment ID being edited
     setNewCommentContent(content); // Set the new comment content
   };
 
-  const handleSaveComment = (id) => {
-    // Save edited comment
-    const updatedComments = comments.map((comment, index) =>
-      index === id ? { ...comment, comment: newCommentContent } : comment
-    );
+  const handleSaveComment = async (commentId) => {
+    try {
+      // Send PUT request to update the comment
+      await api.put(`/comments/${commentId}`, {
+        newComment: newCommentContent,
+      });
 
-    setComments(updatedComments);
+      // Update the comment in the state
+      const updatedComments = comments.map((comment) =>
+        comment._id === commentId
+          ? { ...comment, comment: newCommentContent }
+          : comment
+      );
+      setComments(updatedComments);
 
-    setEditingCommentId(null); // Reset editing state
-    setNewCommentContent(""); // Clear new comment content
+      console.log("Comment updated successfully");
+
+      // Reset editing state
+      setEditingCommentId(null);
+      setNewCommentContent("");
+    } catch (error) {
+      console.error("Error updating comment:", error);
+    }
   };
 
-  const handleDeleteComment = (id) => {
-    // Delete a comment
-    const updatedComments = comments.filter((_, index) => index !== id);
+  const handleDeleteComment = async (commentId) => {
+    try {
+      console.log(commentId);
+      // Send DELETE request to the backend
+      await api.delete(`/comments/${commentId}`);
+      console.log("deleted");
+      // Filter out the deleted comment from the state
+      const updatedComments = comments.filter(
+        (comment) => comment._id !== commentId
+      );
+      setComments(updatedComments);
 
-    setComments(updatedComments);
+      console.log("Comment deleted successfully");
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+    }
   };
 
   const handleLike = () => {
@@ -210,7 +270,7 @@ const VideoPlayer = () => {
   }
 
   if (!video) {
-     // Render a message if the video is not found
+    // Render a message if the video is not found
     return <div className="not-found-message">Video not found!</div>;
   }
 
@@ -337,7 +397,7 @@ const VideoPlayer = () => {
                   <button className="btn-c btn2">Add comment</button>
                 </form>
                 <div className="comments">
-                  {comments?.map((comment, index) => (
+                  {comments?.map((comment) => (
                     <div
                       key={comment._id}
                       style={{
@@ -358,7 +418,7 @@ const VideoPlayer = () => {
                           }}
                         />
                         &bull; <span>{comment.userId?.username}</span>
-                        {editingCommentId === index ? (
+                        {editingCommentId === comment._id ? (
                           <>
                             <Form.Control
                               type="text"
@@ -367,7 +427,9 @@ const VideoPlayer = () => {
                                 setNewCommentContent(e.target.value)
                               }
                             />
-                            <Button onClick={() => handleSaveComment(index)}>
+                            <Button
+                              onClick={() => handleSaveComment(comment._id)}
+                            >
                               Save
                             </Button>
                             <Button
@@ -389,7 +451,7 @@ const VideoPlayer = () => {
                               cursor: "pointer",
                             }}
                             onClick={() =>
-                              handleEditComment(index, comment.comment)
+                              handleEditComment(comment._id, comment.comment)
                             }
                           >
                             <CiEdit />
@@ -399,7 +461,7 @@ const VideoPlayer = () => {
                               marginLeft: "10px",
                               cursor: "pointer",
                             }}
-                            onClick={() => handleDeleteComment(index)}
+                            onClick={() => handleDeleteComment(comment._id)}
                           >
                             <RiDeleteBin6Line />
                           </span>
@@ -415,36 +477,40 @@ const VideoPlayer = () => {
         </Col>
         <Col md={1}></Col>
         <Col md={3}>
-          {fetchedVideos?.map((video) => (
-            <div
-              className="video-card"
-              key={video._id}
-              onClick={() => navigate(`/video/${video._id}`)}
-            >
-              <img src={video.thumbnail} width="280px" alt={video.title} />
-              <div className="col">
-                <h3>{video.title}</h3>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <img
-                    src={video?.author?.avatar}
-                    alt="author avatar"
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      borderRadius: "50%",
-                      objectFit: "cover",
-                      marginRight: "10px",
-                    }}
-                  />
-                  <p>{video.author?.username}</p>
-                </div>
-                <div>
-                  <span>{video.views.toLocaleString()} views</span> &bull;{" "}
-                  <span>{timeAgo(new Date(video.createdAt))}</span>
+          {recommendedVideos.length > 0 ? (
+            recommendedVideos.map((video) => (
+              <div
+                className="video-card"
+                key={video._id}
+                onClick={() => navigate(`/video/${video._id}`)}
+              >
+                <img src={video.thumbnail} width="280px" alt={video.title} />
+                <div className="col">
+                  <h3>{video.title}</h3>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={video.author?.avatar}
+                      alt="author avatar"
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                        marginRight: "10px",
+                      }}
+                    />
+                    <p>{video.author?.username}</p>
+                  </div>
+                  <div>
+                    <span>{video.views.toLocaleString()} views</span> &bull;{" "}
+                    <span>{timeAgo(new Date(video.createdAt))}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <p>No recommendations available.</p>
+          )}
         </Col>
       </Row>
       <SocialMediaModal

@@ -7,9 +7,13 @@ const {
   deleteVideoById,
   uploadVideo,
   getAllVideos,
+  getVideoRecommendations,
 } = require("../controllers/videoController");
 const { authenticateJWT } = require("../services/jwtService");
 const { upload } = require("../services/multerService");
+
+// Route to get video recommendations
+router.post("/videos/recommendations", getVideoRecommendations);
 
 // Route to get 20 videos
 router.get("/videos", get20Videos);
