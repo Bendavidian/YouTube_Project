@@ -159,6 +159,8 @@ Open the app in your browser by navigating to 'http://localhost:8080/'.
 * Deleting a user will also delete all videos uploaded by them, comments on these videos, and comments published by them on other videos.
 
 
+In order to demonstrate all of the functions and actions you can do in our app you can check out the next video if you would like to :
+https://youtu.be/p_qqiLqK70M
 
 
 ![HOMEPAGE](https://github.com/Bendavidian/YouTube_Project/assets/122617665/85796115-e3c8-4f4b-a61e-e4521d9cf287)
